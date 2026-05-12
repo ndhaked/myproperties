@@ -1,0 +1,257 @@
+/* Font Face Declarations */
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-Thin.woff")
+    format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-ExtraLight.woff")
+    format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-SemiBold.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-Black.woff")
+    format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic variants */
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-ThinItalic.woff")
+    format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-ExtraLightItalic.woff")
+    format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-LightItalic.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-RegularItalic.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-MediumItalic.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-SemiBoldItalic.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-BoldItalic.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BR Hendrix";
+  src: url("../fonts/br-hendrix-webfont/BRHendrix-BlackItalic.woff")
+    format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Base HTML styles */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base layer styles */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply font-sans bg-background text-foreground;
+  }
+}
+
+/* Common animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes svg-fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes image-slide {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+/* Common utility classes */
+.animate-scroll-left {
+  animation: scroll-left 40s linear infinite;
+}
+
+.animate-scroll-left:hover {
+  animation-play-state: paused;
+}
+
+.animate-scroll-left .artwork-item:hover {
+  animation-play-state: paused;
+}
+
+.animate-svg-fade {
+  animation: svg-fade 6s ease-in-out infinite;
+}
+
+.animate-image-slide {
+  animation: image-slide 4s ease-in-out infinite;
+}
+
+/* Enhanced backdrop blur */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(8px);
+}

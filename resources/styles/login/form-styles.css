@@ -1,0 +1,120 @@
+.form-input-field {
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #1C1B1B;
+  background: transparent;
+  font-family: 'BR Hendrix', Helvetica;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+  color: #707070;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-input-field-no-width{
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #1C1B1B;
+  background: transparent;
+  font-family: 'BR Hendrix', Helvetica;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+  color: #707070;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input-field::placeholder {
+  color: #9d9d9c;
+}
+
+.form-input-field:focus {
+  border-bottom-color: #1C1B1B;
+}
+
+.form-input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.password-field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #e5e5e5;
+  transition: border-color 0.2s;
+}
+
+.password-field-wrapper:focus-within {
+  border-bottom-color: #1C1B1B;
+}
+
+.password-field-wrapper .form-input-field {
+  border: none;
+  flex: 1;
+}
+
+.password-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.password-toggle-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.verification-code-inputs {
+  display: flex;
+  gap: 28px;
+}
+
+.verification-code-input {
+  flex: 1;
+  text-align: center;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  background: transparent;
+  font-family: 'BR Hendrix', Helvetica;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #505050;
+  outline: none;
+  transition: border-color 0.2s;
+  width:5px;
+}
+
+.verification-code-input:focus {
+  border-bottom-color: #1c1b1b;
+  color: #1c1b1b;
+}
+
+.verification-code-input::placeholder {
+  color: #e5e5e5;
+}
+.countdown-badge {
+  background: #000;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-left: 8px;
+  color: #fff;
+}
+.d-none{
+display: none;
+}

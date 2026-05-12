@@ -1,0 +1,11 @@
+{
+    "name": "ChatBot",
+    "alias": "chatbot",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ChatBot\\Providers\\ChatBotServiceProvider"
+    ],
+    "files": []
+}

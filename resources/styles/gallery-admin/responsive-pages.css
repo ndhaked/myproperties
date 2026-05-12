@@ -1,0 +1,1865 @@
+/* desktop view */
+#main-gallery-list {
+  .gallery-list-header-grid {
+    min-height: 40px;
+    grid-template-columns: 0px 1fr 120px 120px 120px 120px 120px 60px;
+  }
+
+  .content-body {
+    padding: 0 0 24px 0;
+
+    .artist-filter-tabs {
+      border-radius: 12px 12px 0 0;
+    }
+
+    #result {
+      .bg-white {
+        #artwork-list {
+          .gallery-list-header-grid {
+            min-height: 40px;
+            grid-template-columns: 0px 1fr 120px 120px 120px 120px 120px 60px;
+
+            .thumbnail-container {
+              .image-wrapper {
+                .image-box {
+                  /* img {
+                  width: 100px;
+                  height: 100px;
+                } */
+                }
+              }
+            }
+          }
+        }
+
+        /* .artwork-list-header-grid {
+          display: block !important;
+        } */
+      }
+    }
+  }
+}
+
+
+.gallery-about-desc{
+  text-align: justify;
+  line-break: normal !important;
+}
+label#dropArea,
+.upload-section,
+#dropArea2,
+label#dropArea1 {
+  background-color: #FFFFFF !important;
+}
+
+label#dropArea:hover,
+.upload-section:hover,
+#dropArea2:hover,
+label#dropArea1:hover {
+  background-color: #FAFAFA !important;
+  cursor: pointer;
+}
+
+.phone-number-input-gallery {
+  box-shadow: 0px 1px 2px 0px #1018280D !important;
+  border: 1px solid #DDDDDD !important;
+  border-radius: 4px;
+  height: 51px;
+}
+
+.gallery-acc-owner {
+  color: #2A2A2A;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.upload-gallery-cover-popup {
+  font-size: 20px;
+  line-height: 28px;
+  color: #1C1B1B;
+  font-weight: 600;
+}
+
+.gallery-acc-owner-you {
+  font-weight: 400 !important;
+  color: #2A2A2A !important;
+
+}
+
+#gallery-cover-preview-container {
+  width: 100%;
+  justify-content: space-between;
+}
+
+#gallery_update_form {
+  .content-body {
+    padding: 24px !important;
+
+    #result {
+      margin: 0 !important;
+    }
+  }
+}
+
+.delete-branch {
+  cursor: pointer;
+}
+
+#gallery_update_form .content-body:has(.artist-filter-tabs) {
+  padding: 24px 0 !important;
+}
+
+#gallery_update_form .content-body:has(.artist-filter-tabs) #result {
+  margin: 32px !important;
+}
+
+
+.help-support {
+  .content-body {
+    min-height: 100vh;
+  }
+}
+
+.list-btn-action {
+  a {
+    margin: 0 !important;
+  }
+}
+
+.row-button {}
+
+.edit-artwork-desc-wrap {
+  display: flex;
+  justify-content: start;
+  column-gap: 1rem;
+  align-items: center;
+  padding-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: start;
+    padding-top: 1rem;
+  }
+}
+.art-avail-list{
+    @media (max-width: 768px) {
+      position: absolute !important;
+      left:auto !important;
+      right: 1.2rem !important;
+       top: 30px !important;
+    }
+}
+.art-status-list{
+  @media (max-width: 768px) {
+      position: absolute !important;
+      left:calc(100px + 32px)!important;
+      right: auto !important;
+      top: 30px !important;
+    }
+}
+.art-alert-act{
+  @media (max-width: 768px) {
+    margin-top: 0px !important;
+  }
+}
+.edit-artist-galleryname {
+  font-size: 14px;
+  font-weight: 600;
+  color: #303030;
+  line-height: 20px;
+}
+
+.edit-artist-dob {
+  font-size: 14px;
+  font-weight: 400;
+  color: #707070;
+  line-height: 20px;
+}
+
+.gallery-preview-artist-name {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.edit-artist-year {
+  text-transform: capitalize !important;
+}
+
+.three-dots-menu {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-footer {
+  .nav-list {
+    a.nav-item {
+      .page-management {
+        filter: brightness(0) saturate(100%) invert(44%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(85%);
+      }
+
+      &.active {
+        .page-management {
+          filter: brightness(0) saturate(100%) invert(8%) sepia(6%) saturate(325%) hue-rotate(314deg) brightness(93%) contrast(95%);
+        }
+      }
+    }
+
+  }
+}
+
+
+.notification-banner {
+
+  .popup-close-btn,
+  .alert-close {
+    cursor: pointer;
+  }
+}
+
+.artist-name {
+  text-transform: capitalize !important;
+}
+
+.section-header {
+  margin: 0 !important;
+}
+
+.art-consult-wrap {
+  .art-consult-heading {
+    line-height: 32px !important;
+    font-weight: 700 !important;
+  }
+
+}
+
+.featured-badge,
+.set-featured-btn {
+  border-radius: 0 0 4px 4px !important;
+  left: 0 !important;
+  width: 100% !important;
+}
+
+.trash-btn {
+  padding: 4px 4px 0px 4px !important;
+}
+
+.status_bg_draft,
+.status_bg_new,
+.status_new,
+.status_bg_not_active,
+.status_draft {
+  background-color: #f4f4f7 !important;
+  color: #707070 !important;
+  .dot {
+      background-color: #1C1B1B !important;
+      width: 6px;
+      height: 6px;
+    }
+  .edit-popup-status-text {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    .dot {
+      background-color: #1C1B1B !important;
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+.status_bg_for_review,
+.status_bg_in-review,
+.status_in-review {
+  background-color: #FFF5DD;
+  color: #FF5F00;
+
+  .edit-popup-status-text {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    .dot {
+      background-color: #FF5F00;
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+.status_bg_rejected,
+.status_rejected {
+  background-color: #FFF6F6;
+  color: #FF5A5D;
+
+  .edit-popup-status-text {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    .dot {
+      background-color: #FF5A5D;
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+.status_bg_approved,
+.status_published,
+.status_bg_published {
+  background-color: #E8FCEC;
+  color: #28A745;
+
+  .edit-popup-status-text {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    .dot {
+      background-color: #28A745;
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+
+
+
+#main-artwork-list {
+  .artwork-list-header-grid {
+    min-height: 40px;
+    grid-template-columns: 0px 1fr 120px 120px 120px 120px 120px 60px;
+  }
+
+  .content-body {
+    padding: 0 0 24px 0;
+
+    .artist-filter-tabs {
+      border-radius: 12px 12px 0 0;
+    }
+
+    #result {
+      .bg-white {
+
+        #artwork-list {
+          .artwork-list-header-grid {
+            min-height: 40px;
+            grid-template-columns: 0px 1fr 120px 120px 120px 120px 120px 60px;
+
+            .thumbnail-container {
+              .image-wrapper {
+                .image-box {
+                  /* img {
+                  width: 100px;
+                  height: 100px;
+                } */
+                }
+              }
+            }
+          }
+        }
+
+        /* .artwork-list-header-grid {
+          display: block !important;
+        } */
+      }
+    }
+  }
+}
+
+#main-artist-list {
+
+  .content-body {
+    padding: 0 0 24px 0;
+
+    .artist-filter-tabs {
+      border-radius: 12px 12px 0 0;
+    }
+  }
+}
+
+#gallery_update_form {
+  .content-body {
+
+    padding: 24px 0 24px 0;
+
+    .artist-filter-tabs {
+      border-radius: 12px 12px 0 0;
+    }
+
+    #result {}
+  }
+}
+
+.action-menu-btn {}
+
+.page-contact-main {
+  .page-contact-wrap {
+    .contact-header-wrap {
+      .contact-header-left {
+        .contact-header-left-wrap {
+          .social-media {
+            .social-media-wrap {
+              .social-icon-link {
+                display: none;
+              }
+
+              .social-icon-youtube {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.radio-artwork-border {
+  border-right: 1px solid #AFAFAF;
+  padding-right: 1rem;
+
+  @media (max-width: 768px) {
+    border-bottom: 1px solid #AFAFAF;
+    padding-bottom: 1rem;
+    border-right: 0;
+  }
+}
+
+#videoGalleryModal {
+  .video-gallery-container {
+    background: transparent !important;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 601px !important;
+
+    #closeImageGalleryModal {
+      display: none !important;
+    }
+
+    .video-gallery-content {
+      max-height: 531px !important;
+
+      #videoGalleryInfo {
+        display: none !important;
+      }
+
+      #videoGalleryPlayer {
+        min-height: 80vh !important;
+        min-width: 70vw !important;
+      }
+    }
+
+    #videoGalleryPagination {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 7rem;
+      position: relative !important;
+      z-index: -1 !important;
+    }
+
+    #closeVideoGalleryModal {
+      display: none !important;
+    }
+
+  }
+}
+
+#imageGalleryModal {
+  .image-gallery-container {
+    background: transparent !important;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 601px !important;
+
+    #closeImageGalleryModal {
+      display: none !important;
+    }
+
+    .image-gallery-content {
+      max-height: 531px !important;
+    }
+
+    #imageGalleryPagination {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 4rem;
+    }
+  }
+
+}
+
+.edit-artwork-action-btn {
+  border: 0.6px solid #DDDDDD;
+  width: 32px;
+  height: 32px;
+  border-radius: 4.8px;
+}
+
+#artist_create_update_form {
+  .content-body {
+    .artist-update-form {
+      form {
+        .edit-artist-details {
+          .edit-artist-header-form {
+            .edit-artist-status {
+              .edit-artist-threedot {
+                button {
+                  border: 0.6px solid #DDDDDD;
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 4.8px;
+
+                }
+              }
+            }
+
+            .edit-artist-header-wrap {
+              .edit-artist-header-view {
+                .edit-artist-status {
+                  .edit-artist-threedot {
+                    button {
+                      border: 0.6px solid #DDDDDD;
+                      width: 32px;
+                      height: 32px;
+                      border-radius: 4.8px;
+
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.artist-dashboard-page {
+  .dashboard-cards {
+    .card {
+      .card-header {
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+}
+
+.gallery-phone-desc {
+  color: #707070 !important;
+}
+
+#video-upload {
+  font-size: 0;
+}
+
+.gallery-border-btn {
+  border: 0.6px solid #DDDDDD;
+  width: 32px;
+  height: 32px;
+  border-radius: 4.8px;
+}
+
+.edit-art-head {
+  h2 {
+    @media (max-width: 768px) {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  p {
+    @media (max-width: 768px) {
+      color: #505050;
+      font-size: 14px;
+    }
+  }
+}
+
+#artwork_create_update_form {
+  .content-body {
+    .edit-artwork-header {
+      .edit-artwork-header-wrap {
+        .edit-artwork-status {
+          .edit-artwork-threedot {
+            button {
+              border: 0.6px solid #DDDDDD;
+              width: 32px;
+              height: 32px;
+              border-radius: 4.8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.phone-arrow {
+  top: 1.5rem !important;
+  left: 3.5rem !important;
+}
+
+.gallery-update-logo {
+  height: 144px;
+  width: 144px;
+}
+
+.add-branchBtn {
+  width: 100% !important;
+}
+
+/* 
+ .art-consultancy{
+.page-consultancy-overview{
+  padding: 74px 0 80px 0;
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+.page-consultancy-services{
+  padding: 60px 0 60px 0;
+  @media (max-width: 768px) {
+    padding: 6px 0px;
+  }
+}
+.page-consultancy-private-collection{
+   padding: 60px 0 60px 0;
+  @media (max-width: 768px) {
+    padding: 60px 0px;
+  }
+
+}
+.page-consultancy-bespoke{
+  padding: 60px 0 60px 0;
+  @media (max-width: 768px) {
+    padding: 60px 0px;
+  }
+}
+.page-consultancy-philanthropy{
+   padding: 60px 0 60px 0;
+  @media (max-width: 768px) {
+    padding: 60px 0px;
+  }
+}
+ } */
+.atrist-gender-birth-death {
+  padding-top: 0.5rem;
+}
+
+.edit-gallery-tabs {
+  margin-top: -2rem;
+}
+
+.remember-me-wrapper {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .art-consult-wrap {
+    .art-consult-heading {
+      line-height: 22px !important;
+    }
+
+  }
+
+    .admin-footer {
+        .gallery-footer-buttons{
+    a{
+      width: 100% !important;
+      padding-bottom: 1rem;
+    }
+  }
+  }
+  
+  .select-phone-code{
+    width: 70px !important;
+    max-width: 70px !important;
+  }
+
+  .certificate-file-display {
+    flex-wrap: wrap;
+  }
+
+  .gallery_owner_pro_pic {
+    width: 37px !important;
+    height: 37px !important;
+  }
+
+  .artist-preview-img {
+    flex-direction: column-reverse;
+  }
+
+  #artistProPreview {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .edit-gallery-tabs {
+    margin-top: -1rem !important;
+  }
+
+  .atrist-gender-birth-death {
+    padding-top: 0.5rem;
+  }
+
+  .gallery-edit-form .gallery-form-field #galleryLogo {
+    height: 100px !important;
+    width: 144px !important;
+  }
+
+  .admin-gallery-list-container {
+    #main-artwork-list {
+      .content-header {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .add-branchBtn {
+    margin-top: 1rem !important;
+  }
+
+  .gallery-address-mobile {
+    flex-direction: column;
+  }
+
+  .gallery-city {
+    width: 100%;
+    margin-bottom: 0px !important;
+  }
+
+  .gallery-address {}
+
+
+  .social-media {
+    display: none;
+  }
+
+  .edit-artist-header {
+    height: 32px;
+
+    h2 {
+      font-weight: 700 !important;
+    }
+  }
+
+  /* .action-menu-btn {
+    border: 0.6px solid #DDDDDD;
+    width: 32px;
+    height: 32px;
+    border-radius: 4.8px;
+  } */
+
+  #artist_create_update_form,
+  .add-new-artist-page {
+
+    .status_published,
+    .status_in-review,
+    .status_for_review,
+    .status_in-progress,
+    .status_approved,
+    .status_rejected,
+    .status_draft,
+    .status_archived,
+    .status_not_active {
+      font-size: 12px;
+    }
+
+    .flex.w-full.flex-col .flex.justify-between.w-full .edit-artist-name {
+      font-size: 18px !important;
+    }
+
+    .content-body {
+      padding: 1rem 0 !important;
+
+      .settings-header-section {
+        margin: 0 1rem;
+
+        .alert-actions {
+          a {
+            .portal-btn-primary-large {
+              right: calc(100vw - 14.5rem);
+            }
+          }
+        }
+
+        .settings-alert {
+          .alert-content {
+            .alert-text {
+              .alert-title {
+                font-size: 14px;
+                padding-bottom: 6px;
+              }
+
+              .alert-description {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #gallery_update_form {
+    .content-body {
+
+      .artist-filter-tabs {
+        padding: 0 0 0 1rem !important;
+      }
+
+      #result {
+        margin: 0;
+      }
+    }
+  }
+
+  .settings-header-section-gallery {
+    height: auto;
+  }
+
+  .exception-art-size {
+    display: none;
+  }
+
+  .edit-artwork-navbar {
+    margin-bottom: 1rem;
+  }
+
+  .create-artwork-footer-wrap {
+    width: 100%;
+    margin: 0px !important;
+    justify-content: center;
+    margin-left: 0;
+
+    .create-artwork-button-wrap {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  #uploaded-images-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .artwork-tab-nav {
+    margin-bottom: 0;
+  }
+
+  .edit-art-price {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    min-width: 100% !important;
+
+    .edit-art-price-video {
+      width: 100% !important;
+    }
+  }
+
+  .edit-arwork-input-clasific {
+    flex-direction: column;
+  }
+
+  #artwork_create_update_form {
+    .content-body {
+      padding: 1rem !important;
+
+      .edit-artwork-deatails-form {
+        .edit-artwork-form {
+          min-width: 100%;
+
+          .edit-artwork-details {
+            min-width: 100%;
+
+            .price-gap {
+              .price-gap-wrap {
+                .price-gap-input {
+                  .price-gap-input-wrap {
+                    flex-direction: column;
+                  }
+                }
+              }
+            }
+
+            .admin-footer {
+              width: 100%;
+              max-width: fit-content;
+
+              .admin-footer-wrap {
+                width: 100%;
+
+                .admin-footer-layout {
+                  margin-left: 0;
+                  width: 100%;
+                  max-width: fit-content;
+
+                  .admin-footer-btn-wrap {
+                    /* width: 100%;
+                  padding: 1rem; */
+                  }
+                }
+              }
+            }
+
+            .edit-artwork-header {
+              width: 100%;
+              margin-top: 0;
+            }
+
+            .edit-arwork-form-wrap {
+              gap: 1rem;
+
+              .edit-arwork-input-details {
+                flex-direction: column;
+              }
+
+              .edit-artwork-input {
+                @media (max-width: 768px) {
+                  gap: 16px;
+                }
+
+                .edit-artwork-input-wrap {
+                  .edit-artwork-input-details {
+                    flex-direction: column;
+
+                    .edit-arwork-input-clasific {
+                      flex-direction: column;
+                    }
+
+                    img {
+                      display: none;
+                    }
+                  }
+                }
+
+                .edit-arwork-input-details {
+                  flex-direction: column;
+
+                  img {
+                    display: none;
+                  }
+                }
+
+
+              }
+            }
+          }
+        }
+      }
+
+      .edit-artwork-header {
+        flex-direction: row;
+        margin-top: 2rem;
+
+        .edit-artwork-header-wrap {
+          .edit-artwork-status {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 76px;
+            left: 1rem;
+            max-width: calc(100% - 2rem);
+          }
+        }
+      }
+    }
+  }
+
+
+  #main-account-list {
+    .admin-footer {
+      width: 100%;
+
+      .admin-footer-wrap {
+        width: 100%;
+
+        .admin-footer-layout {
+          margin-left: 0;
+          width: 100%;
+
+          .admin-footer-btn-wrap {
+            width: 100%;
+            padding: 1rem;
+
+            .portal-btn-secondary-small {
+              width: 100%;
+              background-color: #1C1B1B;
+
+              span {
+                color: #ffffff;
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+
+    .content-body {
+      padding: 0 1rem 2rem 1rem;
+
+      #F_saveProfileBtn {
+        section {
+          margin-left: 0;
+          margin-top: 1rem;
+
+          .account-header {
+            width: 100%;
+          }
+
+          .account-details-form {
+            flex-direction: column;
+            row-gap: 0.5rem;
+
+            .account-details-input {
+              width: 100%;
+
+              .pass-description {
+                padding-top: 0.5rem;
+
+                #password-requirements-account {
+                  padding-top: 1.25rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #main-artwork-list #result #artwork-list .thumbnail-container>.flex-shrink-0,
+  #main-artwork-list #artwork-list .thumbnail-container>.flex-shrink-0 .list-row-grid {
+    width: 100px;
+    height: 100px;
+  }
+
+  #main-gallery-list {
+    .content-body {
+      #result {
+        margin: 0;
+
+        .bg-white {
+
+          #artwork-list {
+            .artist-list-header-grid {
+              position: relative;
+
+              .thumbnail-container {
+                .image-wrapper {
+                  .image-box {
+                    /* img {
+                  width: 100px;
+                  height: 100px;
+                } */
+                  }
+                }
+              }
+            }
+          }
+
+          .gallery-list-header-grid {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  #main-artwork-list {
+    width: 100%;
+
+    .content-header {
+      width: 100%;
+      padding: 20px 16px;
+      margin: 0;
+
+      .mobile-menu-toggle {
+        display: block;
+        position: relative;
+        top: 0;
+      }
+    }
+
+    .content-body {
+      #result {
+        .bg-white {
+
+          #artwork-list {
+            .artist-list-header-grid {
+              .thumbnail-container {
+                .image-wrapper {
+                  .image-box {}
+                }
+              }
+            }
+          }
+
+          .artwork-list-header-grid {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    .artist-filter-tabs {
+      border-radius: 12px 0 0 0 !important;
+    }
+
+
+  }
+
+  #main-artwork-list {
+    width: 100%;
+
+    .content-header {
+      width: 100%;
+      padding: 11px 16px;
+      margin: 0;
+
+      .mobile-menu-toggle {
+        display: block;
+        position: relative;
+        top: 0;
+      }
+    }
+
+    .content-body {
+      #result {
+        .bg-white {
+
+          #artwork-list {
+            .artist-list-header-grid {
+              .thumbnail-container {
+                .image-wrapper {
+                  .image-box {
+                    /* img {
+                  width: 100px;
+                  height: 100px;
+                } */
+                  }
+                }
+              }
+            }
+          }
+
+          .artwork-list-header-grid {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    .artist-filter-tabs {
+      border-radius: 12px 0 0 0 !important;
+    }
+
+
+  }
+
+  .admin-container:has(#main-artwork-list) .mobile-menu-toggle:not(.content-header .mobile-menu-toggle) {
+    display: none !important;
+  }
+
+  /* #main-artwork-list #result #artwork-list .thumbnail-container > .flex-shrink-0, #main-artwork-list #artwork-list .thumbnail-container > .flex-shrink-0 .image-box{
+    width: 100px;
+    height: 100px;
+   } */
+  .page-header h1 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 50px;
+    margin-top: 8px;
+  }
+
+  .welcome-header h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .welcome-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+  }
+
+  .card-header h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .stat-number {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .stat-badge {
+    font-size: 14px;
+  }
+
+  /* ARTIST LISTING PAGE - MOBILE RESPONSIVE */
+  /* Main result container - match image design */
+  #main-artwork-list #result {
+    margin: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  /* White background container - remove extra padding/borders */
+  #main-artwork-list #result .rounded-lg {
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #FFFFFF !important;
+  }
+
+  /* Artwork list container */
+  #main-artwork-list #result #artwork-list {
+    background: #FFFFFF !important;
+    border-radius: 0 !important;
+  }
+
+  /* Notification banner - match image design */
+  #main-artwork-list .notification-banner {
+    margin: 16px 8px !important;
+    padding: 12px 16px !important;
+    background: #F9FAFB !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+  }
+
+  #main-artwork-list .notification-banner>div {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  #main-artwork-list .notification-banner>div h3 {
+    margin: 0 0 4px 0 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 20px !important;
+    color: #111827 !important;
+  }
+
+  #main-artwork-list .notification-banner>div p {
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    color: #6B7280 !important;
+  }
+
+  #main-artwork-list .notification-banner button {
+    flex-shrink: 0 !important;
+    align-self: flex-start !important;
+    margin-top: 0 !important;
+    padding: 4px !important;
+    cursor: pointer !important;
+    background: transparent !important;
+    border: none !important;
+    color: #6B7280 !important;
+  }
+
+  #main-artwork-list .notification-banner button:hover {
+    color: #111827 !important;
+  }
+
+  /* Hide table header on mobile */
+  #main-artwork-list .bg-gray-50.artist-list-header-grid,
+  #main-artwork-list #result .bg-gray-50.artist-list-header-grid {
+    display: none !important;
+  }
+
+  /* Convert grid rows to card layout - match reference design */
+  #main-artwork-list #result #artwork-list .artist-list-header-grid,
+  #main-artwork-list #artwork-list .artist-list-header-grid,
+  #main-artwork-list #result #artwork-list .artist-list-header-grid.grid,
+  #main-artwork-list #artwork-list .artist-list-header-grid.grid,
+  #main-artwork-list #result #artwork-list div.artist-list-header-grid.grid,
+  #main-artwork-list #artwork-list div.artist-list-header-grid.grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    grid-auto-flow: unset !important;
+    padding: 16px !important;
+    border-top: none !important;
+    border-bottom: 1px solid #E8E8E8 !important;
+    border-left: none !important;
+    border-right: none !important;
+    gap: 16px !important;
+    position: relative !important;
+    min-height: auto !important;
+    align-items: flex-start !important;
+    background: #FFFFFF !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  /* Remove top border from first card to match reference */
+  #main-artwork-list #result #artwork-list .artist-list-header-grid:first-child,
+  #main-artwork-list #artwork-list .artist-list-header-grid:first-child {
+    border-top: none !important;
+  }
+
+  /* Hide checkbox and three-dot menu on mobile */
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>input[type="checkbox"],
+  #main-artwork-list #artwork-list .artist-list-header-grid>input[type="checkbox"],
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.relative.flex.justify-end,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.relative.flex.justify-end {
+    display: none !important;
+  }
+
+  /* Main card content - image and info side by side */
+  #main-artwork-list #result #artwork-list .thumbnail-container,
+  #main-artwork-list #artwork-list .thumbnail-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    padding: 0 !important;
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    min-width: 0 !important;
+    position: relative !important;
+    margin-right: 0 !important;
+    order: 1 !important;
+
+    .thumbnail-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 4px;
+    }
+  }
+
+  /* Artist image container */
+  #main-artwork-list #result #artwork-list .thumbnail-container>.flex-shrink-0,
+  #main-artwork-list #artwork-list .thumbnail-container>.flex-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+
+  #main-artwork-list #result #artwork-list .thumbnail-container .list-img-preivew,
+  #main-artwork-list #artwork-list .thumbnail-container .list-img-preivew {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Artist info container - match reference layout */
+  #main-artwork-list #result #artwork-list .artwork-info-container,
+  #main-artwork-list #artwork-list .artwork-info-container {
+    flex: 1 !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    position: relative !important;
+    padding-right: 0 !important;
+    padding-top: 36px !important;
+  }
+
+  /* Artist name - match reference (title) */
+  #main-artwork-list #result #artwork-list .artist-name,
+  #main-artwork-list #artwork-list .artist-name {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 24px !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  #main-artwork-list #result #artwork-list .artist-name a,
+  #main-artwork-list #artwork-list .artist-name a {
+    color: #000000 !important;
+    text-decoration: none !important;
+    display: block !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+
+  /* Top row: Status badge and Created by - position at top of right section */
+  /* Status badge - position at top left of right section (after image) */
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5),
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5) {
+    position: absolute !important;
+    top: 16px !important;
+    left: calc(100px + 32px) !important;
+    /* 100px image + 16px gap + 16px padding */
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+    width: auto !important;
+  }
+
+  /* Created by - position at top right of card */
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(3),
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(3) {
+    position: absolute !important;
+    top: 16px !important;
+    right: 16px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    font-size: 12px !important;
+    color: #1C1B1B !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+    text-transform: uppercase;
+  }
+
+  /* Status badge styling - match image size and colors */
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .list-status-published,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .list-status-published,
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_in-review,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_in-review,
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_approved,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_approved,
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_published,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_published,
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_draft,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_draft,
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_active,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_active {
+    font-size: 12px !important;
+    padding: 4px 10px !important;
+    border-radius: 999px !important;
+    line-height: 16px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+  }
+
+  #main-gallery-list #result #artwork-list .artist-list-header-grid .thumbnail-container .artist-info-container,
+  #main-gallery-list #artwork-list .artist-list-header-grid .thumbnail-container .artist-info-container {
+    padding-top: 2rem;
+
+    .artist-name {
+      font-size: 14px;
+    }
+  }
+
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7),
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7),
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7),
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) {
+    position: absolute !important;
+    top: auto !important;
+    /* Below artist name */
+    left: 148px !important;
+    /* Align with artist name (same as status) */
+    display: block !important;
+    font-size: 12px !important;
+    color: #707070 !important;
+    margin: 0 !important;
+    width: auto !important;
+    z-index: 5 !important;
+    margin-top: -5rem !important;
+
+    &::after {
+      content: 'Artworks';
+      margin-left: 4px;
+      display: none;
+    }
+  }
+
+  /* Override status colors for mobile to match reference */
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_draft {
+    background: #E5E7EB !important;
+    color: #374151 !important;
+  }
+
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_draft .dot {
+    background: #374151 !important;
+  }
+
+  /* #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_in-review,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_in-review {
+    background: #E8D5FF !important;
+    color: #7D47BF !important;
+  }
+
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_in-review .dot,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_in-review .dot {
+    background: #7D47BF !important;
+  } */
+
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_approved,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_approved,
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_published,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_published {
+    background: #D1FAE5 !important;
+    color: #059669 !important;
+  }
+
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_approved .dot,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_approved .dot,
+  #main-gallery-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_published .dot,
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(7) .status_published .dot {
+    background: #059669 !important;
+  }
+
+
+  /* Status badge styling - match image size and colors */
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .list-status-published,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .list-status-published,
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_in-review,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_in-review,
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_approved,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_approved,
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_published,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_published,
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_draft,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_draft,
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_active,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_active {
+    font-size: 12px !important;
+    padding: 4px 10px !important;
+    border-radius: 999px !important;
+    line-height: 16px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+  }
+
+  /* Override status colors for mobile to match reference */
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_draft {
+    background: #E5E7EB !important;
+    color: #374151 !important;
+  }
+
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_draft .dot {
+    background: #374151 !important;
+  }
+
+  /* #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_in-review,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_in-review {
+    background: #E8D5FF !important;
+    color: #7D47BF !important;
+  }
+
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_in-review .dot,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_in-review .dot {
+    background: #7D47BF !important;
+  } */
+
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_approved,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_approved,
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_published,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_published {
+    background: #D1FAE5 !important;
+    color: #059669 !important;
+  }
+
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_approved .dot,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_approved .dot,
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_published .dot,
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) .status_published .dot {
+    background: #059669 !important;
+  }
+
+  /* Show artwork count - display it below artist name */
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(4),
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(4),
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5),
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5) {
+    position: absolute !important;
+    top: 76px !important;
+    /* Below artist name */
+    left: 132px !important;
+    /* Align with artist name (same as status) */
+    display: block !important;
+    font-size: 12px !important;
+    color: #707070 !important;
+    margin: 0 !important;
+    width: auto !important;
+    z-index: 5 !important;
+
+    &::after {
+      content: 'Artworks';
+      margin-left: 4px;
+      display: none;
+    }
+  }
+
+  #main-gallery-list #result .overflow-hidden #artwork-list .artist-list-header-grid .relative {
+    display: none;
+  }
+
+  #main-gallery-list #result .overflow-hidden #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6),
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(6) {
+    position: absolute !important;
+    top: 20px !important;
+    /* Below artist name */
+    right: 1.5rem !important;
+    /* Align with artist name (same as status) */
+    display: block !important;
+    font-size: 12px !important;
+    color: #707070 !important;
+    margin: 0 !important;
+    width: auto !important;
+    z-index: 5 !important;
+
+    &::after {
+      content: 'Artworks';
+      margin-left: 4px;
+      display: none;
+    }
+  }
+
+  #main-gallery-list #result .overflow-hidden {
+    border: none;
+  }
+
+  #main-gallery-list #result .overflow-hidden #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5),
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5),
+  #main-gallery-list #result .overflow-hidden #artwork-list .artist-list-header-grid>.list-row-text:nth-child(4),
+  #main-gallery-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(4) {
+    display: none !important;
+  }
+
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5),
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5) {
+    position: absolute !important;
+    top: 18px !important;
+    /* Below artist name */
+    right: 1rem !important;
+    left: auto !important;
+    /* Align with artist name (same as status) */
+    display: block !important;
+    font-size: 12px !important;
+    color: #707070 !important;
+    margin: 0 !important;
+    width: auto !important;
+    z-index: 5 !important;
+  }
+
+  /* Hide other metadata columns */
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(4),
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(4),
+  #main-artwork-list #result #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5),
+  #main-artwork-list #artwork-list .artist-list-header-grid>.list-row-text:nth-child(5) {
+    display: none !important;
+  }
+
+  /* Action buttons container - match reference */
+  #main-artwork-list #artwork-list .artwork-info-container>.flex,
+  #main-artwork-list #artwork-list .artwork-info-container>.flex {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-top: 26px !important;
+    width: 100% !important;
+    @media (max-width: 768px) {
+      margin-top: 0 !important;
+    }
+  }
+
+  /* Pagination - adjust for mobile */
+  #main-artwork-list #front_dash_pagination {
+    margin: 16px 8px !important;
+    padding: 16px 0 !important;
+  }
+
+  /* Filter tabs - ensure they scroll horizontally */
+  #main-gallery-list,
+  #main-artwork-list .artist-filter-tabs {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: thin !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+  }
+
+  #artwork_create_update_form {
+    .content-body {
+      .edit-artwork-navbar {
+        .artwork-tab-nav {
+          overflow-x: auto !important;
+          -webkit-overflow-scrolling: touch !important;
+          scrollbar-width: thin !important;
+          flex-wrap: nowrap !important;
+          white-space: nowrap !important;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          min-width: 100%;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+
+  #artwork_create_update_form .artwork-tab-nav::-webkit-scrollbar {
+    height: 4px !important;
+  }
+
+  #artwork_create_update_form .artwork-tab-nav::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  #artwork_create_update_form .artwork-tab-nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 2px !important;
+  }
+
+  /* Prevent filter tab buttons from wrapping */
+  #artwork_create_update_form .artwork-tab-nav .artwork-nav {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+
+
+
+
+  #main-gallery-list,
+  #main-artwork-list .artist-filter-tabs::-webkit-scrollbar {
+    height: 4px !important;
+  }
+
+  #main-gallery-list,
+  #main-artwork-list .artist-filter-tabs::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  #main-gallery-list,
+  #main-artwork-list .artist-filter-tabs::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 2px !important;
+  }
+
+  /* Prevent filter tab buttons from wrapping */
+  #main-gallery-list,
+  #main-artwork-list .artist-filter-tabs .filter-tab {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hide fixed positioned hamburger from sidebar when on artist listing page */
+  .admin-container:has(#main-artwork-list) .mobile-menu-toggle[style*="position: fixed"],
+  .admin-container:has(#main-artwork-list) .mobile-menu-toggle:not(.content-header .mobile-menu-toggle) {
+    display: none !important;
+  }
+
+  /* Content header adjustments */
+  /* #main-artwork-list .content-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    gap: 0px !important;
+    margin: 11px 16px !important;
+    padding: 0 !important;
+  } */
+
+  /* First div container - hamburger and title */
+  #main-artwork-list .content-header>div:first-child {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+  }
+
+  /* Mobile menu toggle - remove fixed positioning and align properly */
+  #main-artwork-list .content-header .mobile-menu-toggle {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: auto !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  /* Ensure hamburger icon is properly sized */
+  #main-artwork-list .content-header .mobile-menu-toggle .hamburger {
+    width: 20px !important;
+    height: 14px !important;
+    display: block !important;
+  }
+
+  /* Page title styling */
+  #main-artwork-list .content-header .page-title {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 26px !important;
+    color: #101828 !important;
+    margin: 0 !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  #main-artwork-list .content-header .header-actions {
+    width: 100% !important;
+    order: 2 !important;
+  }
+
+  #main-artwork-list .content-header .header-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    background: #1C1B1B !important;
+    color: #FFFFFF !important;
+    border-radius: 999px !important;
+    padding: 10px 24px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+
+  /* Ensure white background for cards */
+  #main-artwork-list #artwork-list .bg-white {
+    background: #FFFFFF !important;
+  }
+
+  /* Content body padding */
+  #main-artwork-list .content-body {
+    padding: 0 !important;
+    width: 100vw;
+  }
+}

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Import Design Tokens */
+@import "./tokens/base.css";
+@import "./tokens/static.css";
+@import "./tokens/admin.css";
+
+/* Import Component Styles */
+@import "./components/base.css";
+@import "./components/tailwind-theme.css";
+
+/* impot login styles */
+@import "./login/style.css";
+@import "./login/form-styles.css";
+@import "./login/responsive-layout.css";
+
+@import "./adai-admin/sidebar.css";
+@import "./adai-admin/styles.css";
+@import "./adai-admin/portal-buttons.css";
+
+
+@import "./gallery-admin/gallery-admin.css";
+@import "./gallery-admin/responsive-pages.css";
+@import "./adai-admin/responsive.css";
+
+@import "./cms/cms-pages.css";
+
+/* import marketplace styles */
+@import "./marketplace/home.css";
+@import "./marketplace/sub-nav.css";
+@import "./marketplace/artworks.css";
+@import "./marketplace/artwork-details.css";
+@import "./marketplace/artist-details.css";
+@import "./marketplace/footer.css";
+@import "./marketplace/global-search.css";
+@import "./marketplace/artist-listing.CSS";
+@import "./marketplace/gallery.css";
+@import "./marketplace/gallery-details.css";
+
+@import "./marketplace/components/_slider.CSS";
+@import "./marketplace/components/_artists-card.CSS";
+@import "./marketplace/components/_artwork-card.CSS";
+@import "./marketplace/components/_category-card.CSS";
+@import "./marketplace/components/_event-card.CSS";
+@import "./marketplace/components/_gallery-card.CSS";
+@import "./marketplace/components/_gallery-list-card.CSS";
+@import "./marketplace/components/_gallery-card-search.CSS";
+@import "./marketplace/components/_sub-nav.CSS";
+@import "./marketplace/components/_filter.CSS";
+
+
+
+
+
+
+
+/* @import "./admin-gallery/styles.css"; */
+/* @import "./adai-admin/gallery.css"; */

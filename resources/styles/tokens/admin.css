@@ -1,0 +1,90 @@
+:root {
+  /* Layout dimensions */
+  --admin-header-height: 64px;
+  --sidebar-width: 288px;
+  --header-height: 72px;
+
+  /* Admin background - matches sidebar */
+  --admin-bg-gradient: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(247, 247, 247, 0.6) 100%);
+  --admin-bg-composite: var(--admin-bg-gradient);
+
+  /* Accent colors */
+  /* --admin-accent: #dfff00;
+  --admin-accent-secondary: #e2f705; */
+  --admin-accent: #e2f705;
+  --admin-muted: #505050;
+
+  /* Button colors - used in admin-outline variant */
+  --admin-button-black: #1c1b1b;
+  --admin-button-white: #ffffff;
+
+  /* Sidebar colors - used in AdminSidebar component */
+  --admin-sidebar-bg: #ffffff;
+  --admin-sidebar-active-bg: var(--admin-accent);
+  --admin-sidebar-active-text: #000000;
+
+  /* Sidebar navigation colors */
+  --admin-sidebar-section-heading: #707070;
+  --admin-sidebar-link-text: #707070;
+  --admin-sidebar-link-icon: #707070;
+  --admin-sidebar-link-hover-bg: rgba(0, 0, 0, 0.04);
+  --admin-sidebar-link-hover-text: #1c1b1b;
+  --admin-sidebar-user-bg: #ffffff;
+  --admin-sidebar-user-text: #1c1b1b;
+  --admin-sidebar-user-text-small: #9d9d9c;
+  --admin-sidebar-border: var(--ds-border);
+
+  --color-black: #2A2A2A;
+  --color-text-primary: #1C1B1B;
+  --color-text-secondary: #505050;
+  --color-text-tertiary: #707070;
+  --color-text-muted: #9D9D9C;
+  --color-white: #FFFFFF;
+  --color-border: #DDDDDD;
+  --color-bg-gray: #F4F4F7;
+  --color-yellow: #E2F705;
+  --color-cyan: #05F9E2;
+  --color-orange: #FF5F00;
+  --color-hover-bg: rgba(0, 0, 0, 0.04);
+  --color-active-bg: rgba(0, 0, 0, 0.06);
+  
+  --font-family: 'BR Hendrix', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  
+  --shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-card: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  
+  --sidebar-width: 288px;
+  
+  --transition-speed: 0.2s;
+
+  --color-primary-black: #1c1b1b;
+  --color-gray-900: #101828;
+  --color-gray-700: #344054;
+  --color-gray-600: #475467;
+  --color-gray-500: #505050;
+  --color-gray-400: #707070;
+  --color-gray-300: #9d9d9c;
+  --color-gray-200: #afafaf;
+  --color-gray-100: #dddddd;
+  --color-gray-50: #f5f5f5;
+  --color-white: #ffffff;
+  --color-accent-yellow: #e2f705;
+  --color-success: #28a745;
+  --color-success-bg: #e8fcec;
+  --color-warning: #ff5f00;
+  --color-warning-bg: #fff4dd;
+  --color-inactive: #f4f4f7;
+  --color-border: #e8e8e8;
+}
+
+/* Admin layout */
+.admin-page-wrapper {
+  background: var(--admin-bg-composite);
+  min-height: 100vh;
+}
+
+.admin-content-area {
+  background: var(--admin-bg-composite);
+}

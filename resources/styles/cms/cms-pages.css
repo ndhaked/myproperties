@@ -1,0 +1,204 @@
+.management-page {
+    #tabContent {
+        .content-body {
+            padding: 1.5rem 2rem;
+        }
+    }
+}
+/* cms styles */
+.management-page{
+  .content-body{
+    min-height: calc(100vh - 72px);
+  }
+}
+.cms-management-page {
+    .artist-filter-tabs{
+        .filter-tab {
+            white-space: nowrap;
+        }
+    }
+    .content-body {
+         padding: 1.5rem 2rem;
+         @media (max-width: 768px) {
+                padding:1.5rem 1rem;
+            }
+        .cms-form-wrapper {
+            .cms-manage-form {
+                margin-bottom: 2rem;
+                &#F_saveArtist{
+                    section{
+                       padding: 0 !important; 
+                    }
+                    footer.artist-edit-footer .artist-edit-footer-container{
+                        margin: 0rem 1rem !important;
+                    }
+                }
+                .cms-form-section {
+                    padding: 0 !important;
+                    @media (max-width: 768px) {
+                        padding: 0 1rem !important;
+                    }
+                    .cms-form-input-wrapper {
+                        @media (max-width: 768px) {
+                            margin-bottom: 0 !important;
+                        }
+                        .cms-form-input {
+                            .cms-form-label {
+                                @media (max-width: 768px) {
+                                    flex-direction: column;
+                                    row-gap: 1rem;
+                                }
+                                label {
+                                    @media (max-width: 768px) {
+                                        width: 100%;
+                                    }
+                                }
+                                .cms-form-input-details {
+                                    @media (max-width: 768px) {
+                                        width: 100%;
+                                    }
+                                    .cms-input-details {
+                                        padding: 0px;
+                                        .cms-input {
+                                            padding: 0px;
+                                            input, textarea {
+                                                width: 100%;
+                                                padding: 6px 12px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .privacy-section .privacy-section-wrapper{
+                @media (max-width: 768px) {
+                    width: 100%;
+                    padding-left: 1rem !important;
+                    padding-right: 1rem !important;
+                    gap: 1rem !important;
+                    margin-bottom: 2rem !important;
+                }
+                .privacy-cms-input-wrap{
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                        row-gap: 1rem;
+                    }
+                    .cms-form-input-details{
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .cms-manage-form{
+            width: 100%;
+            &#F_cmsContact{
+                section{
+                    .cms-form-input-wrapper {
+                        @media (max-width: 768px) {
+                            margin-bottom: 0 !important;
+                        }
+                        .cms-form-input {
+                            .cms-form-label {
+                                @media (max-width: 768px) {
+                                    flex-direction: column;
+                                    row-gap: 1rem;
+                                }
+                                label {
+                                    @media (max-width: 768px) {
+                                        width: 100%;
+                                    }
+                                }
+                                .cms-form-input-details {
+                                    @media (max-width: 768px) {
+                                        width: 100%;
+                                    }
+                                    .cms-input-details {
+                                        padding: 0px;
+                                        .cms-input {
+                                            width: 100%;
+                                            padding: 6px 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                footer.artist-edit-footer .artist-edit-footer-container{
+                    margin: 0rem 1rem !important;
+                }
+            }
+        }
+        #F_saveArtist{
+            @media (max-width: 768px){
+                width: 100%;
+            }
+            #editor{
+               @media (max-width: 768px){
+                    width: 100% !important;
+                }   
+            }
+
+        }
+    }
+    &.art-consultancy-page, &.about-adai-page{
+        .artist-filter-tabs.flex.items-center.space-x-2{
+            padding: 0rem 1rem !important;
+        }
+        .content-body{
+            padding: 1rem !important;
+            #F_cmsForm{
+                width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 2rem;
+                .main-cms-input{
+                    margin-bottom: 0px !important;
+                }
+                .cms-input-wrap{
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                        row-gap: 0.75rem;
+                    }
+                    label {
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
+                    }
+                    .cms-form-input-details, .ermsg{
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
+                        .cms-input-details {
+                            padding: 0px;
+                            .cms-input {
+                                padding: 0px;
+                                input, textarea {
+                                    width: 100%;
+                                    padding: 6px 12px;
+                                }
+                            }
+                        }
+                    }
+                    &.custom-margin-top{
+                        margin-top: 1rem;
+                    }
+                }
+                #press-container{
+                    margin-bottom: 1rem;
+                    fieldset{
+                        width: 100%;
+                    }
+                }
+                .items-block{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.responsive-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.responsive-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.responsive-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.responsive-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.responsive-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 640px;
+}
+
+.responsive-logo {
+  width: 128px;
+  height: 36px;
+  margin-bottom: 40px;
+}
+
+.responsive-card {
+  width: 100%;
+  background: #fafafa;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.responsive-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .responsive-page {
+    padding: 16px;
+  }
+
+  .responsive-logo {
+    width: 96px;
+    height: 27px;
+    margin-bottom: 32px;
+  }
+
+  .responsive-footer {
+    margin-top: 32px;
+  }
+}

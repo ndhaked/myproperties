@@ -1,0 +1,217 @@
+:root {
+  /* Font families */
+  --font-sans: "BR Hendrix", "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+
+  /* Base colors */
+  --primary: #000000;
+  --primary-hover: #9d9d9c;
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: #1c1b1b0d;
+  --secondary-foreground: oklch(0.205 0 0);
+
+  --muted: oklch(0.97 0 0);
+  --muted-text: oklch(0.556 0 0);
+  --muted-foreground: #344054;
+  --muted-background: #f6f7f9;
+
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --accent-background: #e2e6eb;
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: #d0d5dd;
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+
+  --background: #ffffff;
+  --foreground: #1c1b1b;
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  /* ADAI Blue Colors */
+  --blue: #1a57f5;
+  --blue-50: oklch(0.97 0.02 240);
+  --blue-100: oklch(0.94 0.04 240);
+  --blue-500: oklch(0.6 0.2 240);
+  --blue-600: oklch(0.5 0.25 240);
+  --blue-700: oklch(0.4 0.25 240);
+  --blue-800: oklch(0.3 0.2 240);
+
+  /* Toast Colors */
+  --success-border: oklch(0.8 0.15 142);
+  --success-background: oklch(0.95 0.05 142);
+  --success-foreground: oklch(0.2 0.15 142);
+  --warning-border: oklch(0.8 0.15 85);
+  --warning-background: oklch(0.95 0.05 85);
+  --warning-foreground: oklch(0.2 0.15 85);
+  --warning-text: #e2f705;
+  --info-border: oklch(0.8 0.15 240);
+  --info-background: oklch(0.95 0.05 240);
+  --info-foreground: oklch(0.2 0.15 240);
+  --info-text: #707070;
+
+  /* Chart Colors */
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  /* Sidebar Colors */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Admin Colors */
+  --admin-background: var(--background);
+  --admin-foreground: var(--foreground);
+  --admin-accent: var(--admin-accent);
+  --admin-accent-foreground: var(--admin-accent-foreground);
+  --admin-border: var(--admin-border);
+  --admin-ring: var(--admin-ring);
+
+  /* Border Radius */
+  --radius: 0.625rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 999px;
+
+  /* Design System Primitives */
+  --ds-color-bg: var(--background);
+  --ds-color-surface: var(--card);
+  --ds-color-popover: var(--popover);
+  --ds-color-text: var(--foreground);
+  --ds-color-text-muted: var(--muted-foreground);
+  --ds-color-border: var(--border);
+  --ds-color-primary: var(--primary);
+  --ds-color-primary-foreground: var(--primary-foreground);
+  --ds-color-secondary: var(--secondary);
+  --ds-color-secondary-foreground: var(--secondary-foreground);
+  --ds-color-accent: var(--accent);
+  --ds-color-accent-foreground: var(--accent-foreground);
+  --ds-color-success: var(--success-background);
+  --ds-color-success-foreground: var(--success-foreground);
+  --ds-color-warning: var(--warning-background);
+  --ds-color-warning-foreground: var(--warning-foreground);
+  --ds-color-danger: var(--destructive);
+  --ds-color-danger-foreground: var(--destructive-foreground);
+  --ds-color-info: var(--info-background);
+  --ds-color-ring: var(--ring);
+  --ds-color-input: var(--input);
+  --ds-primary-400: var(--primary-hover);
+
+  /* Neutral palette */
+  --ds-neutral-25: #fcfcfd;
+  --ds-neutral-50: #f9fafb;
+  --ds-neutral-100: #f2f4f7;
+  --ds-neutral-200: #e4e7ec;
+  --ds-neutral-300: #d0d5dd;
+  --ds-neutral-400: #98a2b3;
+  --ds-neutral-500: #9d9d9c;
+  --ds-neutral-600: #475467;
+  --ds-neutral-700: #344054;
+  --ds-neutral-800: #1d2939;
+  --ds-neutral-900: #101828;
+
+  /* Typography */
+  --ds-font-sans: var(--font-sans);
+  --ds-font-mono: var(--font-mono);
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+  --ds-font-size-xs: 12px;
+  --ds-font-size-sm: 14px;
+  --ds-font-size-md: 16px;
+  --ds-font-size-lg: 18px;
+  --ds-font-size-xl: 20px;
+  --ds-font-size-2xl: 32px;
+  --ds-font-size-3xl: 40px;
+  --ds-font-size-4xl: 48px;
+  --ds-font-size-5xl: 52px;
+  --ds-line-height-xs: 1.2;
+  --ds-line-height-sm: 1.3;
+  --ds-line-height-md: 1.4;
+  --ds-line-height-lg: 1.5;
+  --ds-line-height-xl: 1.6;
+  --ds-line-height-2xl: 36px;
+  --ds-line-height-3xl: 52px;
+  --ds-line-height-4xl: 56px;
+  --ds-line-height-5xl: 64px;
+  --ds-line-height-tight: 1.23077;
+  --ds-line-height-snug: 1.3;
+  --ds-line-height-normal: 1.5;
+  --ds-line-height-relaxed: 1.65;
+
+  /* Spacing */
+  --ds-space-0: 0;
+  --ds-space-1: 0.25rem;
+  --ds-space-2: 0.5rem;
+  --ds-space-3: 0.75rem;
+  --ds-space-4: 1rem;
+  --ds-space-5: 1.25rem;
+  --ds-space-6: 1.5rem;
+  --ds-space-8: 2rem;
+  --ds-space-10: 2.5rem;
+  --ds-space-12: 3rem;
+
+  /* Radius */
+  --ds-radius-xs: 2px;
+  --ds-radius-sm: var(--radius-sm);
+  --ds-radius-md: var(--radius-md);
+  --ds-radius-lg: var(--radius-lg);
+  --ds-radius-xl: var(--radius-xl);
+  --ds-radius-pill: 9999px;
+
+  /* Shadows */
+  --ds-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --ds-shadow-sm:
+    0 1px 3px rgba(16, 24, 40, 0.1), 0 1px 2px rgba(16, 24, 40, 0.06);
+  --ds-shadow-md:
+    0 4px 6px rgba(16, 24, 40, 0.1), 0 2px 4px rgba(16, 24, 40, 0.06);
+  --ds-shadow-lg:
+    0 10px 15px rgba(16, 24, 40, 0.1), 0 4px 6px rgba(16, 24, 40, 0.05);
+
+  /* Motion */
+  --ds-duration-100: 100ms;
+  --ds-duration-150: 150ms;
+  --ds-duration-200: 200ms;
+  --ds-duration-300: 300ms;
+  --ds-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ds-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Z-index */
+  --ds-z-base: 0;
+  --ds-z-dropdown: 1000;
+  --ds-z-sticky: 1100;
+  --ds-z-overlay: 1200;
+  --ds-z-modal: 1300;
+  --ds-z-popover: 1400;
+  --ds-z-tooltip: 1500;
+
+  /* Breakpoints */
+  --ds-bp-sm: 640px;
+  --ds-bp-md: 768px;
+  --ds-bp-lg: 1024px;
+  --ds-bp-xl: 1280px;
+  --ds-bp-2xl: 1440px;
+  --ds-bp-3xl: 1700px;
+}

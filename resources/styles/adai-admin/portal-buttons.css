@@ -1,0 +1,615 @@
+/* Primary Buttons - Large */
+.portal-btn-primary-large {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 32px;
+    background-color: #1c1b1b;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-primary-large:hover {
+    background-color: #303030;
+  }
+  
+  .portal-btn-primary-large:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Primary Buttons - Small */
+  .portal-btn-primary-small {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    padding: 10px 24px;
+    background-color: #1c1b1b;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-primary-small:hover {
+    background-color: #303030;
+  }
+  
+  .portal-btn-primary-small:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Secondary Buttons - Large (Outlined) */
+  .portal-btn-secondary-large {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 32px;
+    background-color: transparent;
+    border: 1px solid #505050;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: #1c1b1b;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-secondary-large:hover {
+    background-color: #f4f4f7;
+    border-color: #707070;
+  }
+  
+  .portal-btn-secondary-large:disabled {
+    border-color: #dddddd;
+    color: #9d9d9c;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Secondary Buttons - Small (Outlined) */
+  .portal-btn-secondary-small {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    padding: 10px 24px;
+    background-color: transparent;
+    border: 1px solid #505050;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: #1c1b1b;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-secondary-small:hover {
+    background-color: #f4f4f7;
+    border-color: #707070;
+  }
+  
+  .portal-btn-secondary-small:disabled {
+    border-color: #dddddd;
+    color: #9d9d9c;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Tertiary Buttons - Large (White with border) */
+  .portal-btn-tertiary-large {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 32px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: black;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .portal-btn-tertiary-large:hover {
+    background-color: #f4f4f7;
+  }
+  
+  .portal-btn-tertiary-large:disabled {
+    color: #9d9d9c;
+    cursor: not-allowed;
+  }
+  
+  /* Tertiary Buttons - Small (White with border) */
+  .portal-btn-tertiary-small {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    padding: 10px 24px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: black;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-tertiary-small:hover {
+    background-color: #f4f4f7;
+  }
+  
+  .portal-btn-tertiary-small:disabled {
+    color: #9d9d9c;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Compact Buttons - Primary */
+  .portal-btn-compact-primary {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 4px 16px;
+    background-color: #1c1b1b;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .portal-btn-compact-primary:hover {
+    background-color: #303030;
+  }
+  
+  .portal-btn-compact-primary:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Compact Buttons - Secondary */
+  .portal-btn-compact-secondary {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 4px 16px;
+    background-color: transparent;
+    border: 1px solid #505050;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: #1c1b1b;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-compact-secondary:hover {
+    background-color: #f4f4f7;
+    border-color: #707070;
+  }
+  
+  .portal-btn-compact-secondary:disabled {
+    border-color: #dddddd;
+    color: #9d9d9c;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+  
+  /* Compact Buttons - Rounded */
+  .portal-btn-compact-rounded {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 20px;
+    background-color: transparent;
+    border: 1px solid #505050;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: #1c1b1b;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .portal-btn-compact-rounded:hover {
+    background-color: #f4f4f7;
+    border-color: #707070;
+  }
+  
+  .portal-btn-compact-rounded:disabled {
+    border-color: #dddddd;
+    color: #9d9d9c;
+    cursor: not-allowed;
+  }
+  
+  /* Compact Buttons - Rounded Primary */
+  .portal-btn-compact-rounded-primary {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 20px;
+    background-color: #1c1b1b;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-compact-rounded-primary:hover {
+    background-color: #303030;
+  }
+  
+  .portal-btn-compact-rounded-primary:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Text Link Buttons - Small */
+  .portal-btn-text-link-small {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1c1b1b;
+    text-align: center;
+    text-decoration: underline;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-text-link-small:hover {
+    color: #303030;
+  }
+  
+  .portal-btn-text-link-small:disabled {
+    color: #9d9d9c;
+    cursor: not-allowed;
+  }
+  
+  /* Text Link Buttons - Base */
+  .portal-btn-text-link-base {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1c1b1b;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-text-link-base:hover {
+    color: #303030;
+  }
+  
+  .portal-btn-text-link-base:disabled {
+    color: #9d9d9c;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  /* Follow Button */
+  .portal-btn-follow {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 6px 12px;
+    background-color: white;
+    border: 1px solid #1c1b1b;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: #1c1b1b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: fit-content;
+  }
+  
+  .portal-btn-follow:hover {
+    background-color: #f4f4f7;
+  }
+  
+  /* Following Button (Selected State) */
+  .portal-btn-following {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 6px 12px;
+    background-color: white;
+    border: 1px solid #afafaf;
+    border-radius: 999px;
+    font-family: "BR Hendrix", Helvetica;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: #1c1b1b;
+    width: fit-content;
+  }
+  
+  /* Form input field */
+  
+
+  .portal-floating-label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    background-color: transparent;
+    padding-top: 3px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;  
+
+    color: #707070;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    background: #ffffff !important;
+  }
+
+  .portal-floating-label.active {
+    top: 1px !important;
+    transform: translateY(0);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    background-color: transparent !important;
+    /* padding: 0 4px; */
+  }
+
+  .portal-floating-label.active.textarea {
+    top: 1px !important;
+    transform: translateY(0);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    background-color: #ffffff !important;
+
+    width: 95%;
+    /* padding: 0 4px; */
+  }
+  .portal-floating-label.active.textarea.disabled {
+    top: 1px !important;
+    transform: translateY(0);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    background-color: transparent !important;
+
+    width: 95%;
+    /* padding: 0 4px; */
+  }
+
+  .portal-floating-label.error-active {
+    /* color: hsl(0, 83%, 62%); */
+  }
+
+  .portal-input-field {
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 20px 16px 4px 12px;
+    background-color: #ffffff;
+    transition: border-color 0.15s ease-in;
+    outline: none;
+
+    color: #1C1B1B;
+    font-family: "BR Hendrix";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+
+/* shadowXS */
+box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  }
+
+  .portal-input-field:focus {
+    /* border-color: hsl(217, 100%, 56%); */
+  }
+
+  .portal-input-field.error {
+    border-color: hsl(0, 83%, 62%);
+  }
+
+  .portal-input-field:disabled {
+    background-color: hsl(0, 0%, 93%);
+    border-color: hsl(0, 0%, 88%);
+    color: hsl(0, 0%, 70%);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .error-msg {
+    font-size: 0.875rem;
+    color: hsl(0, 83%, 62%);
+    margin-top: 0.25rem;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+  }
+
+  .error-msg.show {
+    opacity: 1;
+  }
+
+  .input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: hsl(0, 0%, 60%);
+    transition: color 0.2s ease-in-out;
+    pointer-events: none;
+  }
+
+  .portal-input-field:focus ~ .input-icon {
+    color: hsl(217, 100%, 56%);
+  }
+
+  .portal-input-field.error ~ .input-icon {
+    /* color: hsl(0, 83%, 62%); */
+  }
+
+  /* input::selection,
+  textarea::selection {
+    background: transparent;
+    color: inherit;
+  } */
+  /* Autofill background */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #000000 !important;
+  transition: background-color 9999s ease-in-out 0s;
+  background: transparent !important;
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+  <mask id="mask0_6558_15450" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26">
+    <path d="M25.167 25.1667V0.499674H0.5V25.1667H25.167Z" fill="white" stroke="white"/>
+  </mask>
+  <g mask="url(#mask0_6558_15450)">
+    <path d="M21.8574 14.2878H3.81055V0.752602H21.8574V14.2878Z" stroke="white" stroke-miterlimit="10"/>
+    <path d="M5.31445 18.7995C5.31445 19.63 4.6411 20.3034 3.81055 20.3034C2.97999 20.3034 2.30664 19.63 2.30664 18.7995C2.30664 17.9689 2.97999 17.2956 3.81055 17.2956C4.6411 17.2956 5.31445 17.9689 5.31445 18.7995Z" stroke="white" stroke-miterlimit="10"/>
+    <path d="M3.81055 20.3027V25.6667" stroke="white" stroke-miterlimit="10"/>
+    <path d="M14.3379 18.7995C14.3379 19.63 13.6645 20.3034 12.834 20.3034C12.0034 20.3034 11.3301 19.63 11.3301 18.7995C11.3301 17.9689 12.0034 17.2956 12.834 17.2956C13.6645 17.2956 14.3379 17.9689 14.3379 18.7995Z" stroke="white" stroke-miterlimit="10"/>
+    <path d="M12.834 20.3027V25.6667" stroke="white" stroke-miterlimit="10"/>
+    <path d="M23.3613 18.7995C23.3613 19.63 22.688 20.3034 21.8574 20.3034C21.0269 20.3034 20.3535 19.63 20.3535 18.7995C20.3535 17.9689 21.0269 17.2956 21.8574 17.2956C22.688 17.2956 23.3613 17.9689 23.3613 18.7995Z" stroke="white" stroke-miterlimit="10"/>
+    <path d="M21.8574 20.3027V25.6667" stroke="white" stroke-miterlimit="10"/>
+    <path d="M3.81055 8.27213H8.61889C10.3867 8.27213 12.115 8.79539 13.5859 9.77604C15.0569 10.7567 16.7852 11.2799 18.553 11.2799H21.8574" stroke="white" stroke-miterlimit="10"/>
+    <path d="M15.8418 5.26432C15.8418 6.09488 15.1684 6.76823 14.3379 6.76823C13.5073 6.76823 12.834 6.09488 12.834 5.26432C12.834 4.43376 13.5073 3.76042 14.3379 3.76042C15.1684 3.76042 15.8418 4.43376 15.8418 5.26432Z" stroke="white" stroke-miterlimit="10"/>
+    <path d="M21.8566 8.29407C19.2797 8.42526 16.7652 9.11164 14.4844 10.3014" stroke="white" stroke-miterlimit="10"/>
+    <path d="M1.55469 24.9147H6.06641" stroke="white" stroke-miterlimit="10"/>
+    <path d="M10.5781 24.9147H15.0898" stroke="white" stroke-miterlimit="10"/>
+    <path d="M19.6016 24.9147H24.1133" stroke="white" stroke-miterlimit="10"/>
+    <path d="M3.81055 20.3026C6.54264 22.124 10.1019 22.124 12.834 20.3026" stroke="white" stroke-miterlimit="10"/>
+    <path d="M12.834 20.3026C15.5661 22.124 19.1253 22.124 21.8574 20.3026" stroke="white" stroke-miterlimit="10"/>
+  </g>
+</svg>

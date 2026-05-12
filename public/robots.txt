@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /dashboard
+Disallow: /login
+Disallow: /register
+Disallow: /profile
+Disallow: /settings
+Disallow: /leads
+Disallow: /deals
+Disallow: /projects
+Disallow: /users
+Disallow: /run-manual-migrations
+Disallow: /run-manual-seeders
+
+Allow: /
+Allow: /laravel-expert-in-jaipur
+Allow: /hire-laravel-developer-in-jaipur
+Allow: /senior-laravel-developer-india
+Allow: /laravel-api-development
+
+Sitemap: https://laravelexpert.in/sitemap.xml

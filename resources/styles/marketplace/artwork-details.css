@@ -1,0 +1,1162 @@
+/* Breadcrumbs */
+.artwork-details-breadcrumbs {
+    @apply w-full bg-white py-4;
+    padding: 20px 0px 32px 0px;
+}
+
+.artwork-details-container {
+    @apply mx-auto px-4 lg:px-8;
+    margin: 0px 64px;
+    padding-inline: 0px !important;
+}
+
+.artwork-breadcrumb-nav {
+    @apply flex items-center gap-2 text-sm;
+}
+
+.artwork-breadcrumb-link {
+    @apply text-gray-500 hover:text-gray-900 transition-colors;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #505050;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.artwork-breadcrumb-separator {
+    @apply text-gray-400;
+}
+
+.artwork-breadcrumb-current {
+    @apply text-gray-900 font-medium;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #505050;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Main Artwork Display Section */
+.artwork-details-main {
+    @apply w-full bg-white py-8 lg:py-12;
+    padding-top: 0px;
+}
+
+.artwork-details-grid {
+    /* @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8;
+    grid-template-columns: 1fr minmax(0, 440px); */
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+/* Left Column: Image Gallery */
+.artwork-details-image-column {
+    width: calc(67% - 1rem);
+    flex: 0 0 calc(67% - 1rem);
+}
+
+.artwork-image-gallery {
+    @apply w-full;
+}
+
+.artwork-image-main-wrapper {
+    @apply relative w-full mb-4;
+    aspect-ratio: 1 / 1;
+    /* background-color: #f5f5f5; */
+}
+
+.artwork-image-main {
+    @apply w-full h-full object-cover;
+}
+
+.artwork-gallery-nav {
+    @apply absolute top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white border border-gray-300 rounded-full p-2 transition-all cursor-pointer;
+}
+
+.artwork-gallery-prev {
+    @apply left-0;
+
+    &.slick-prev {
+        display: flex !important;
+        left: 0 !important;
+    }
+}
+
+.artwork-gallery-next {
+    @apply right-0;
+
+    &.slick-next {
+        right: 0 !important;
+    }
+}
+
+.artwork-gallery-info {
+    @apply flex items-center gap-2 justify-center;
+}
+
+.artwork-gallery-counter {
+    @apply text-sm text-gray-600;
+}
+
+.artwork-gallery-dots {
+    @apply flex items-center gap-1;
+}
+
+.artwork-gallery-dot {
+    @apply w-12 bg-gray-300 rounded cursor-pointer transition-colors;
+    height: 1px;
+}
+
+.artwork-gallery-dot.active {
+    @apply bg-gray-900;
+}
+
+/* Right Column: Artwork Details */
+.artwork-details-info-column {
+    width: calc(33% - 1rem);
+    flex: 0 0 calc(33% - 1rem);
+    justify-content: end;
+    /* max-width: 440px; */
+}
+
+.artwork-artist-info {
+    @apply mb-2;
+}
+
+.artwork-artist-name-wrapper {
+    @apply flex items-center gap-2;
+    justify-content: space-between;
+}
+
+.artwork-artist-name {
+    @apply text-lg font-bold text-black;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #1C1B1B;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.artwork-verified-badge {
+    @apply inline-flex items-center gap-1 px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #1C1B1B;
+    background: none;
+    display: none;
+    .verified-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+.artwork-details-title {
+    @apply text-[32px] font-bold text-black uppercase mb-3 leading-tight;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #1C1B1B;
+    margin-bottom: 16px;
+}
+
+.artwork-year-medium {
+    @apply text-base text-gray-700 mb-4;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #707070;
+    margin-bottom: 4px;
+}
+
+.artwork-certificate {
+    @apply flex items-center gap-2 text-sm text-gray-700 mb-4;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #707070;
+    margin-bottom: 4px;
+    @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    span.artwork-certificate{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #707070;
+        @media (max-width: 768px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+.artwork-dimensions {
+    @apply text-base text-gray-700;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #707070;
+    margin-bottom: 28px;
+}
+
+.artwork-price-section {
+    @apply mb-6;
+}
+
+.artwork-price {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    color: #1C1B1B;
+    margin-top: 28px;
+    margin-bottom: 0px;
+    @media (max-width: 768px) {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+.artwork-price-disclaimer {
+    @apply text-xs text-gray-500;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #707070;
+    padding-top: 2px;
+}
+
+/* Action Buttons */
+.artwork-action-buttons {
+    @apply flex flex-col sm:flex-row gap-3 mb-8;
+    margin: 28px 0px;
+}
+
+.artwork-btn {
+    @apply px-6 py-3 text-sm font-bold uppercase tracking-wide transition-all cursor-pointer;
+    font-weight: 700;
+}
+
+.artwork-btn-primary {
+    @apply bg-black text-white hover:bg-gray-800;
+}
+
+.artwork-btn-secondary {
+    @apply bg-white text-black border-2 border-black hover:bg-gray-50;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1C1B1B;
+    border: 1px solid #505050;
+    border-radius: 999px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artwork-btn-outline {
+    @apply bg-white text-black border border-black hover:bg-gray-50;
+}
+
+.artwork-btn-save {
+    @apply flex items-center justify-center gap-2;
+}
+
+.artwork-dropdown-secton {
+    border-top: 1px solid #DDDDDD;
+    padding-top: 16px;
+    margin-bottom: 28px;
+    
+    .artwork-dropdown-icon {
+        transition: opacity 0.5s ease-in-out;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .artwork-dropdown-icon.plus {
+        opacity: 1;
+    }
+    
+    .artwork-dropdown-icon.minus {
+        opacity: 0;
+    }
+    
+    .artwork-info-section.active .artwork-dropdown-icon.plus {
+        opacity: 0;
+    }
+    
+    .artwork-info-section.active .artwork-dropdown-icon.minus {
+        opacity: 1;
+    }
+}
+
+/* Info Sections (Collapsible) */
+.artwork-info-section {
+    @apply pb-4 mb-4;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.artwork-info-toggle {
+    @apply w-full flex items-center justify-between text-left cursor-pointer;
+    position: relative;
+}
+
+.artwork-info-title {
+    @apply text-base font-bold text-black;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #1C1B1B;
+}
+
+.artwork-info-icon {
+    @apply transition-transform;
+}
+
+.artwork-info-content {
+    @apply text-sm text-gray-700 mt-2;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+
+.artwork-info-section.active .artwork-info-content {
+    display: block;
+    opacity: 1;
+    padding-top: 8px;
+    padding-bottom: 0;
+    margin-top: 8px;
+
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #1C1B1B;
+    }
+}
+
+/* Gallery Info Section */
+.artwork-gallery-info-section {
+    @apply mb-6;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 28px;
+
+    .artwork-gallery-name {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        color: #1C1B1B;
+        margin-bottom: 4px;
+    }
+
+    .artwork-gallery-location {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #505050;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .artwork-btn-outline {
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #1C1B1B;
+        padding: 4px 16px;
+    }
+}
+
+.artwork-gallery-name {
+    @apply text-lg font-bold text-black mb-1;
+    font-weight: 700;
+}
+
+.artwork-gallery-location {
+    @apply text-sm text-gray-600 mb-4;
+
+    .location-icon {
+        margin-right: 3px;
+        width: 10px;
+        height: 13px;
+    }
+}
+
+/* Export Section */
+.artwork-export-section {
+    display: none;
+    .download-artwork-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.artwork-export-link {
+    @apply inline-flex items-center gap-2 text-sm font-medium text-black hover:text-gray-600 transition-colors;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #1C1B1B;
+    text-decoration: underline;
+}
+
+/* About the Artwork Section */
+.artwork-about-section {
+    @apply w-full bg-white py-8 lg:py-12;
+
+    .artwork-details-container {
+        max-width: 864px;
+    }
+
+    .artwork-about-content {
+        margin-bottom: 24px;
+    }
+
+    .artwork-about-title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        color: #1C1B1B;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #1C1B1B;
+        margin-bottom: 8px;
+    }
+
+    .artwork-description {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 27px;
+        color: #1C1B1B;
+    }
+
+    .artwork-specifications {
+        padding: 16px;
+        border: 1px solid #DDDDDD;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .artwork-spec-row {
+            border: none;
+            padding: 0px;
+
+            .artwork-spec-label,
+            .artwork-spec-value {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #505050;
+            }
+        }
+    }
+}
+
+.artwork-about-title {
+    @apply text-[28px] lg:text-[36px] font-bold text-black mb-6;
+    font-weight: 700;
+}
+
+.artwork-about-content {
+    @apply mb-8;
+}
+
+.artwork-description {
+    @apply text-base text-gray-700 leading-relaxed;
+    line-height: 1.6;
+}
+
+/* Artwork Specifications */
+.artwork-specifications {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.artwork-spec-row {
+    @apply flex items-start gap-4 py-2 border-b border-gray-100;
+}
+
+.artwork-spec-label {
+    @apply text-sm font-bold text-gray-900 min-w-[140px];
+    font-weight: 700;
+}
+
+.artwork-spec-value {
+    @apply text-sm text-gray-700 flex-1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    /* .artwork-details-title {
+        @apply text-[28px];
+    } */
+}
+
+@media (max-width: 768px) {
+    .artwork-details-grid {
+        @apply gap-6;
+    }
+
+    .artwork-action-buttons {
+        @apply flex-col;
+    }
+
+    .artwork-btn {
+        @apply w-full;
+    }
+
+    .artwork-gallery-nav {
+        @apply p-1.5;
+    }
+
+    .artwork-gallery-nav svg {
+        @apply w-4 h-4;
+    }
+
+    .artwork-specifications {
+        @apply grid-cols-1;
+    }
+
+    .artwork-spec-row {
+        @apply flex-col gap-1;
+    }
+
+    .artwork-spec-label {
+        @apply min-w-0;
+    }
+}
+
+@media (max-width: 640px) {
+    .artwork-about-title {
+        @apply text-[24px];
+    }
+
+    .artwork-gallery-dot {
+        @apply w-8;
+    }
+}
+
+/* Enquire to Buy Modal */
+.enquire-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.enquire-modal.active {
+    display: flex;
+}
+
+.enquire-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.enquire-modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    max-width: 560px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 10000;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.enquire-modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1C1B1B;
+    transition: color 0.2s ease;
+}
+
+.enquire-modal-close:hover {
+    color: #707070;
+}
+
+.enquire-modal-close svg {
+    width: 24px;
+    height: 24px;
+}
+
+.enquire-modal-title {
+    @apply text-[#1C1B1B];
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0 0 16px 0;
+    padding-right: 40px;
+}
+
+.enquire-modal-description {
+    @apply text-[#1C1B1B];
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 32px 0;
+    color: #505050;
+}
+
+.enquire-form {
+    @apply flex flex-col;
+    gap: 24px;
+}
+
+.enquire-form-group {
+    @apply flex flex-col;
+}
+#enquire-phone{
+    padding: 0;
+}
+.enquire-input {
+    @apply w-full text-[#1C1B1B];
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0 0 8px 0;
+    border: none;
+    border-bottom: 1px solid #1C1B1B;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.enquire-input::placeholder {
+    @apply text-[#9D9D9C];
+    opacity: 0.6;
+}
+
+.enquire-input:focus {
+    border-bottom-color: #1C1B1B;
+    border-bottom-width: 2px;
+    padding-bottom: 7px;
+}
+
+.enquire-textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+}
+
+.enquire-submit-btn {
+    @apply bg-[#1C1B1B] text-white rounded-lg px-6 py-3;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+    @apply hover:bg-[#2a2a2a] transition-colors;
+    margin-top: 8px;
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .enquire-modal-content {
+        padding: 32px 24px;
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .enquire-modal-close {
+        top: 16px;
+        right: 16px;
+    }
+
+    .enquire-modal-title {
+        font-size: 24px;
+        line-height: 32px;
+        padding-right: 32px;
+    }
+
+    .enquire-modal-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.artwork-details {
+    .masonry-grid {
+        .artwork-item {
+            .artwork-item-image {
+                max-height: 480px;
+                min-height: 200px;
+            }
+        }
+    }
+
+    .artwork-card {
+        .artwork-image-wrapper {
+            max-height: 480px;
+            min-height: 200px;
+        }
+    }
+
+    .artists-card {
+        .artists-card-image-wrapper {
+            max-height: 480px;
+            min-height: 200px;
+        }
+    }
+}
+
+#front_artwork_details_page {
+    .artwork-detl-container {
+        width: 100%;
+        padding: 0 4rem;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+            padding: 0 1rem;
+        }
+
+    }
+
+    .section-container {
+        padding-top: 72px;
+        padding-bottom: 0;
+
+        @media (max-width: 768px) {
+            padding-top: 60px;
+            padding-bottom: 0;
+            .section-link{
+                margin-left: 16px;
+            }
+        }
+
+        .mp-section-header {
+            .section-title {}
+        }
+
+        .swiper-container {
+            .artwork-slider {
+                .slick-list{
+                    .slick-track{
+                        display: flex;
+                        align-items: flex-end;
+                    }
+                }
+                .artwork-card-wrapper {
+                    height: auto !important;
+                    max-height: inherit;
+                    .artwork-card {
+                        .artwork-image-wrapper {
+                            max-height: 480px;
+                            min-height: 200px;
+                            max-width: 278px;
+                            display: flex;
+                            align-items: end;
+                            img {}
+                        }
+
+                        .artwork-content {
+                            .artwork-title {}
+
+                            .artwork-meta {
+                                .artwork-meta-date {}
+
+                                .mktp-artwork-price {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-container {
+        padding-top: 80px;
+        padding-bottom: 0;
+
+        @media (max-width: 768px) {
+            padding-top: 60px;
+            padding-bottom: 0;
+        }
+
+        .mp-section-header {
+            .section-title {}
+        }
+
+        .swiper-container {
+            .artist-card-wrapper {
+                .artists-card {
+                    .artists-card-image-wrapper {
+                        img {}
+                    }
+
+                    .artists-card-body {
+                        .artists-card-avatar-wrapper {
+                            img {}
+                        }
+
+                        .artists-card-profile-info {
+                            .artists-card-name {}
+
+                            .artists-card-location{
+        font-size: 14px;
+        line-height: 20px;
+        @media (max-width: 768px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-container {
+        .swiper-container {
+            .artist-slider {
+                padding-bottom: 5rem;
+            }
+        }
+    }
+
+    .artwork-details-main {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .artwork-details-container {
+            margin: 0;
+
+            .artwork-details-grid {
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    position: relative;
+                }
+
+                .artwork-details-image-column {
+                    @media (max-width: 768px) {
+                        /* width: 100%; */
+                        /* flex: 0 0 100%; */
+                        position: absolute;
+                        width: 100vw;
+                        left: -16px;
+                    }
+
+                    .artwork-image-gallery {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .artwork-image-main-wrapper {
+                            display: flex;
+                            justify-content: center;
+                            aspect-ratio: inherit;
+                            &.hide-arrow{
+                                button.artwork-gallery-nav.artwork-gallery-prev.slick-prev.slider-arrow.slider-arrow-prev,
+                                button.artwork-gallery-nav.artwork-gallery-next.slick-next.slider-arrow.slider-arrow-next{
+                                    display: none;
+                                    opacity: 0;
+                                }
+                            }
+
+                            .artwork-gallery-prev {
+
+
+                                img {}
+
+                                &.slick-prev {
+                                    @media (max-width: 768px) {
+                                        display: none !important;
+                                    }
+                                }
+                            }
+
+                            .artwork-gallery-next {
+                                @media (max-width: 768px) {
+                                    display: none;
+                                }
+
+                                img {}
+                            }
+
+                            .art-img-wrapper{
+                                width: 736px;
+                                height: 491px;
+                                @media (max-width: 1366px) {
+                                   width: auto;
+                                }
+                                @media (max-width: 768px) {
+                                    width: 100%;
+                                    height: 371px;
+                                }
+                                .artwork-image-main {
+                                    height: 100%;
+                                    width: 100%;
+                                    object-fit: cover;
+                                    object-position: center;
+
+                                    @media (max-width: 768px) {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                            }
+                              
+                            .artwork-show-similar-btn {
+                                display: none !important;
+                                right: 1rem;
+                                bottom: 2rem;
+                                display: flex;
+                                align-items: center;
+                                position: absolute;
+                                width: 130px;
+                                height: 36px;
+                                padding: 8px 12px;
+                                gap: 6px;
+                                border-radius: 999px;
+                                background-color: #00000080;
+                                font-weight: 700;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                                cursor: pointer;
+                                @media (max-width: 768px) {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .artwork-gallery-info {
+                            @media (max-width: 768px) {
+                                width: 100%;
+                                
+                            }
+                            .artwork-gallery-counter {
+                                @media (max-width: 768px) {
+                                    display: none;
+                                }
+                            }
+
+                            .artwork-gallery-dots {}
+                        }
+                        .artwork-image-gallery-counter{
+                            display: none;
+                            @media (max-width: 768px) {
+                                display: flex;
+                                gap: 3px;
+                                justify-self: center;
+                                align-items: center;
+                                background: #1C1B1BCC;
+                                border-radius: 999px;
+                                padding: 2px 6px;
+                                position: absolute;
+                                top: 8px;
+                                right: 8px;
+                                span{
+                                    font-weight: 400;
+                                    font-size: 12px;
+                                    line-height: 16px;
+                                    color: #FFFFFF;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .artwork-details-info-column {
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        flex: 0 0 100%;
+                        margin-top: calc(390px + 28px);
+                    }
+
+                    .artwork-artist-info {
+                        .artwork-artist-name-wrapper {
+                            .artwork-artist-name {}
+
+                            .artwork-verified-badge {}
+                        }
+
+                        .artwork-year-medium {}
+                    }
+
+                    .artwork-action-buttons{
+                        @media (max-width: 768px) {
+                            flex-direction: row;
+                            .artwork-btn{
+                                font-size: 14px;
+                                line-height: 20px;
+                                height: 44px;
+                            }
+                        }
+                    }
+                    .artwork-gallery-info-section {
+                        .artwork-btn {
+                            @media (max-width: 768px) {
+                                max-width: 120px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .art-img-wrapper{
+        position: relative;
+    }
+    .artwork-details-breadcrumbs {
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        .artwork-details-container {
+            margin: 0;
+        }
+    }
+
+    .artwork-about-section {
+        padding-top: 5rem;
+        padding-bottom: 0;
+
+        @media (max-width: 768px) {
+            padding-top: 60px;
+            padding-bottom: 0;
+
+        }
+
+        .artwork-details-container {
+            margin: 0;
+
+            .artwork-about-content {}
+
+            .artwork-specifications {
+                .artwork-spec-row {
+                    @media (max-width: 768px) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    .artwork-spec-label {
+                        @media (max-width: 768px) {
+                            min-width: 50%;
+                        }
+                    }
+
+                    .artwork-spec-value {
+                        @media (max-width: 768px) {
+                            min-width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.enquire-modal{
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+    .enquire-modal-content{
+        border-radius: 0px;
+        padding: 40px 56px 48px 56px;
+        @media (max-width: 768px) {
+            padding: 20px 28px;
+            width: 100%;
+        }
+        .enquire-modal-close{
+            top: 8px;
+            right: 8px;
+        }
+        h2.enquire-modal-title{
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 40px;
+            color: #1C1B1B;
+            margin-bottom: 4px;
+            @media (max-width: 768px) {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+        .enquire-modal-description{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            color: #1C1B1B;
+            margin-bottom: 32px;
+            @media (max-width: 768px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+    .enquire-form{
+        gap: 28px;
+        .enquire-input{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            color: #1C1B1B !important;
+        }
+        .custom-phone-input{
+            .form-input-field-no-width{
+                width: 100%;
+                max-width: 86px;
+            }
+        }
+        .enquire-submit-btn{
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+            margin-top: 4px;
+            @media (max-width: 768px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+

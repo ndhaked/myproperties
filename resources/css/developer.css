@@ -1,0 +1,447 @@
+label.error {
+    color: red !important;
+}
+.astric {
+    color: red !important;
+}
+#loader {
+    display: none;
+}
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 245, 245, 0.8);
+    z-index: 10000;
+    display: none;
+    text-align: center;
+}
+#loader img {
+    margin-bottom: 0px;
+}
+#loader #status {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.status-text span {
+    color: #042463;
+    font-size: 17px;
+    margin-left: -43px;
+}
+#deleteArtistModal {
+    display: none;
+}
+#deleteArtistModalBackground {
+    display: none;
+}
+#restoreArtistModal {
+    display: none;
+}
+#restoreArtistModalBackground {
+    display: none;
+}
+#deleteGalleryModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+    display: none;
+}
+#deleteGalleryModalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: none;
+}
+
+#rejectArtistModal {
+    /* top: 238px;
+    right: 386px; */
+    display: none;
+}
+#rejectArtistModalBackground {
+    display: none;
+}
+#rejectArtistModal {
+    z-index: 9999;
+    max-width: 800px;
+}
+#approvedArtistModalBackground {
+    display: none;
+}
+#approvedArtistModal {
+    z-index: 9999;
+    max-width: 480px;
+}
+#approvedArtist{width: 280px;}
+.list-img-preivew {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+}
+#result .notification-banner {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.artworks-by-category-marketplaceslider{max-width: fit-content !important;}
+.branch-block + .branch-block {
+    margin-top: 24px; /* or 30px */
+}
+/* #main-artwork-list .content-body {
+    padding: 24px 32px !important;
+}
+#main-artwork-list #result {
+    margin-left: 0px;
+    margin-right: 0px;
+} */
+.featured-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 162px;
+    background: #000000b0;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.set-featured-btn {
+    position: absolute;
+    bottom: 1px;
+    left: 5px;
+    background: #1C1B1B;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.disabled-back{background: #f9f7f7 !important;}
+[role="radiogroup"] > div.flex.items-start {
+    cursor: pointer; /* hand cursor */
+}
+
+.gallery_owner_pro_pic{
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      border: solid #d9d8d8 1px;
+}
+
+.artactive span {
+  font-weight: 600;
+  color: black;
+}
+.form-locked {
+    /* Prevents all clicking, selecting, and focusing */
+    pointer-events: none;
+    
+    /* Visual cue that it is disabled */
+    opacity: 0.6;
+    user-select: none; /* Prevents text highlighting */
+    background-color: #f9f9f9; /* Optional: Light gray background */
+}
+/*.lobibox-notify-msg{min-height: 61px !important}*/
+#click-shield{
+  height: 34px !important;
+  top: 470px !important;
+  left: 87%;
+  width: 7%;
+}
+
+.artwork-dimensions{display: block;}
+
+.input-color-text{
+      .custom-country-code{
+              color: #1C1B1B !important;
+            }
+}
+.country-code-color {
+  color: #9D9D9C;
+}
+.country-code-color.selected {
+  color: #1C1B1B;
+  opacity: 1 !important;
+}
+
+.totel-counts {
+  font-weight: initial;
+  font-size: 18px;
+}
+
+.main-content {
+  & .list-status-published {
+    display: inline-block;
+  }
+}
+
+.main-content .action-menu-dropdown a {
+  line-height: 16px;
+  display: inherit;
+  line-height: 16px;
+}
+
+.main-content .list-status-review {
+  width:-moz-max-content;
+  width:max-content;
+  display:flex;
+  padding:3px 12px;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  border-radius:999px;
+  background:#fff5dd;
+  color:#ff5f00;
+  font-size:14px;
+  line-height:20px;
+  font-weight:400
+}
+.main-content .list-status-review .dot {
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#ff5f00
+}
+.main-content .list-edit-button-white {
+  color:#1c1b1b;
+  font-size:14px;
+  line-height:20px;
+  font-weight:500;
+  display:flex;
+  padding:4px 16px;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  border:1px solid #1C1B1B;
+  background:#fff;
+  border-radius:999px;
+  border:1px solid #505050
+}
+.main-content .list-edit-button-white:hover {
+  color:#000
+}
+.main-content .list-review-button-black {
+  color:#fff;
+  font-size:14px;
+  line-height:20px;
+  font-weight:500;
+  display:flex;
+  padding:4px 16px;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  border-radius:8px;
+  border:1px solid #1C1B1B;
+  background:#1c1b1b;
+  border-radius:999px!important;
+  border:1px solid #505050
+}
+.main-content .list-heading-text {
+  color:#505050;
+  font-size:12px;
+  line-height:18px;
+  font-weight:400;
+  letter-spacing:1px;
+  text-transform:uppercase
+}
+.main-content .dot-menu-button {
+  color:#1c1b1b;
+  font-size:12px;
+  line-height:26px;
+  font-weight:400
+}
+.main-content .dot-menu-button:hover {
+  color:#000
+}
+.main-content .action-menu-btn {
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+.main-content .action-menu-dropdown {
+  width:-moz-max-content;
+  width:max-content;
+  padding:0 10px;
+  border:1px solid #DDDDDD;
+  border-radius:4px;
+  align-items:center;
+  justify-content:center;
+  right:0;
+  top:100%
+}
+.main-content .action-menu-dropdown a {
+  line-height: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@layer utilities {
+  .text-white {
+    color: #fff;
+    background: #145DA6;
+  }
+}
+
+.delete-btn-lead{background: red;}
+.details-bkg{background: #faf7fb !important;}
+.note-editable{height: 120px !important}
+.model-title-bg{background: #145da6 !important;}
+
+
+/* Apply to both Header and List Rows */
+.main-content .artist-list-header-grid,
+.main-content .artist-list-grid { /* Check if your row container has this class */
+    display: grid;
+    /* 1. Checkbox: 30px
+       2. ID: 60px (Fixed small width)
+       3. Name: 1.5fr (Flexible, wide)
+       4. Country: 1fr (Flexible)
+       5. Project: 1.5fr (Flexible, wide)
+       6. Created At: 120px
+       7. Status: 100px
+       8. Action: 50px 
+    */
+    grid-template-columns: 30px 60px 1.5fr 1fr 1.5fr 120px 100px 50px !important;
+    align-items: center;
+    gap: 10px; /* Optional: adds space between columns */
+}
+
+
+.lead-grid.artist-list-header-grid,
+.lead-grid.artist-list-grid { 
+    display: grid;
+    /* 1. Checkbox: 30px
+       2. ID: 60px
+       3. Name: 1.5fr
+       4. Country: 1fr
+       5. Project: 1.5fr
+       6. ASSIGN USER: 1.2fr  <-- ADDED THIS NEW COLUMN
+       7. Created At: 120px
+       8. Status: 100px
+       9. Action: 50px 
+    */
+    grid-template-columns: 30px 60px 1.5fr 1fr 1.5fr 1.2fr 120px 100px 50px !important;
+    
+    align-items: center;
+    gap: 10px;
+}
+
+/* Apply to both Header and List Rows */
+/*.main-content .artist-list-header-grid,
+.main-content .artist-list-grid { 
+    display: grid;
+    grid-template-columns: 50px 1.5fr 120px 1.5fr 1fr 120px 100px 50px !important;
+    gap: 15px;
+    align-items: center;
+}*/
+.project-grid.artist-list-header-grid,
+.project-grid.artist-list-grid {  /* Check if your row container has this class */
+    display: grid;
+    /* 1. ID: 50px (Small fixed)
+       2. Name: 1.5fr (Flexible - Person Name)
+       3. Mobile: 120px (Fixed - Phone Number)
+       4. Project Name: 1.5fr (Flexible - Long Text)
+       5. Project Type: 1fr (Flexible - Short Text)
+       6. Created At: 120px (Fixed - Date)
+       7. Status: 100px (Fixed - Badge)
+       8. Action: 50px (Fixed - Button)
+    */
+    grid-template-columns: non !important;
+    /*grid-template-columns: 50px 1.5fr 120px 1.5fr 1fr 120px 100px 50px !important;*/
+    gap: 15px;
+    align-items: center;
+}
+ 
+/* Apply to both Header and List Rows */
+/* Fix for Users List - 8 Columns */
+.main-content .users-grid {
+    display: grid;
+    /* 1. Checkbox: 0px (Hidden as per design)
+       2. ID: 60px (Fixed small)
+       3. Name: 1.5fr (Flexible space)
+       4. Email: 2fr (Flexible - Emails need more space)
+       5. Role: 120px (Fixed)
+       6. Created At: 120px (Fixed date)
+       7. Status: 100px (Fixed badge)
+       8. Action: 50px (Fixed dots)
+    */
+    grid-template-columns: 0px 60px 1.5fr 2fr 120px 120px 100px 50px !important;
+    
+    gap: 15px;
+    align-items: center;
+}
+
+.action-menu-dropdown {
+    z-index: 50 !important; /* Forces menu to top layer */
+    width: 180px; /* Optional: Sets a nice width for the menu */
+    right: 100%; /* Optional: positions it to the left of the button if preferred */
+}
+
+
+/* Toggle Switch - Scoped to .users-grid */
+.users-grid .switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;  /* Slightly smaller to fit grid */
+  height: 18px;
+}
+
+/* Hide default HTML checkbox */
+.users-grid .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The Slider */
+.users-grid .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb; /* Gray-200 */
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.users-grid .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Active State (Green) */
+.users-grid .switch input:checked + .slider {
+  background-color: #84cc16; /* Tailwind Lime-500 */
+}
+
+/* Slider Move Animation */
+.users-grid .switch input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* Disabled State (Optional, while loading) */
+.users-grid .switch input:disabled + .slider {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

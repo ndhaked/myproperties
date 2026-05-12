@@ -1,0 +1,168 @@
+.gallery-listing {
+    .artist-details-container {
+        padding: 0 !important;
+    }
+    .artworks-clear-all {
+        display: none;
+    }
+    .artworks-filter-section {
+        .artworks-filter-container {
+            .artworks-filters-row {
+                margin-bottom: 0px;
+                .artworks-filters-left {
+                    display: flex;
+                    width: 70%;
+                    flex: 0 0 70%;
+
+                    .site-sub-search {
+                        border: 1px solid #DDDDDD;
+                        height: 40px;
+                        box-shadow: 0px 1px 2px 0px #1018280D;
+
+                        .search-icon-left {
+                            img {
+                                filter: brightness(0) saturate(100%) invert(44%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(85%);
+                            }
+                        }
+
+                        .sub-search-input {
+                            line-height: 20px;
+                            color: #707070;
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .artworks-filter-button-wrapper{
+                    
+                    .artworks-filter-button{
+                        background:#F4F4F7;
+                        border: 0;
+                        color:#1C1B1B;
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        height: 40px;
+                    }
+                }
+                .artworks-filters-right{
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        .artworks-filter-button-wrapper{
+                            .artworks-filter-button-sort{
+                                width: 100%;
+                                justify-content: flex-start;
+                                .artworks-sort-arrow{
+                                    margin-right: 0px;
+                                    margin-left: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+                .artworks-filters-mobile{
+                    width: calc(50% - 4px);
+                    flex: 0 0 calc(50% - 4px);
+                    .artworks-filter-button-wrapper{
+                        width: 100%;
+                        .artworks-filter-button-consolidated{
+                        width: 100%;
+                        justify-content: flex-start;
+                            .arrow-icon-right{
+                                margin-right: 0px;
+                                margin-left: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gallery-search-card{
+        .gallery-search-card-image-wrapper{
+  max-height: 480px;
+        min-height: 200px;
+        }
+    }
+     .masonry-grid{
+     .artwork-item{
+      .artwork-item-image{
+         max-height: 480px;
+        min-height: 200px;
+      }
+    }
+    }
+    .artwork-card {
+        .artwork-image-wrapper {
+            max-height: 480px;
+            min-height: 200px;
+        }
+    }
+    .artists-card {
+        .artists-card-image-wrapper {
+            max-height: 480px;
+            min-height: 200px;
+        }
+    }
+    .global-search-count{
+        .artist-details-container{
+            max-width: 100%;
+            margin: 0px 64px;
+            @media (max-width: 768px) {
+                margin: 0px 16px;
+            }
+        }
+    }
+    .gallery-list-container{
+        .artists-grid-section{
+            .container{
+                max-width: -webkit-fill-available;
+                margin: 0px 64px;
+                @media (max-width: 768px) {
+                    margin: 0px;
+                }
+                .artists-container{
+                    @media (min-width: 1440px) {
+                        justify-content: space-between;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(416px, 1fr));
+                        gap: 32px;
+                        box-sizing: border-box;
+                        .gallery-search-card{
+                            width: auto;
+                            .gallery-search-card-image-wrapper{
+                                width: auto;
+                            }
+                        }
+                    }
+                    @media (max-width: 768px) {
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+        .artworks-pagination-section{
+            max-width: -webkit-fill-available;
+            margin: 0px 64px;
+            @media (max-width: 768px) {
+                margin: 0px 16px;
+            }
+            .artworks-pagination-container{
+                max-width: -webkit-fill-available;
+            }
+        }
+    }
+    
+    .gallery-search-card-wrapper{
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+    .artworks-hero-section{
+        .artworks-hero-content{
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+}

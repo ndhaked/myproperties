@@ -1,0 +1,48 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # ----------------------------------------------------------------------
+    # 1. Redirect www to non-www (Specific for laravelexpert.in)
+    # ----------------------------------------------------------------------
+    RewriteCond %{HTTP_HOST} ^www\.laravelexpert\.in [NC]
+    RewriteRule ^(.*)$ https://laravelexpert.in/$1 [L,R=301]
+
+    # ----------------------------------------------------------------------
+    # 2. Existing Rules
+    # ----------------------------------------------------------------------
+
+    # Remove trailing slashes (except for directories)
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_URI} !(\.mp4|\.webm|\.css|\.js|\.jpg|\.jpeg|\.png|\.pdf|.ttf|\.eot|\.svg|\.woff|\.woff2|\.otf|\.ogg|\.gif|\.ico|robots\.txt)$ [NC]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # Handle Asset mapping to /public folder
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(css|js|images|resources|assets|fonts|node_modules|storage|img|admin|lobibox|modules|build|sounds|portfolio)/(.*)$ public/$1/$2 [L,NC]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+# MIME Types
+AddType video/mp4 mp4 m4v
+AddType audio/mp4 m4a
+AddType video/ogg ogv
+AddType audio/ogg ogg oga
+AddType video/webm webm
+
+# Security Block
+<FilesMatch "^(\.env|composer\.(json|lock)|package\.json|artisan|server\.php|phpunit\.xml)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+Options -Indexes

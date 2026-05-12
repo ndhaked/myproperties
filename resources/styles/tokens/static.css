@@ -1,0 +1,98 @@
+:root {
+  /* Layout dimensions */
+  --static-header-height: 80px;
+  --static-footer-height: 200px;
+  --static-content-min-height: calc(
+    100vh - var(--static-header-height) - var(--static-footer-height)
+  );
+
+  /* Static page colors */
+  --static-bg-primary: var(--background);
+  --static-bg-secondary: var(--ds-neutral-50);
+  --static-text-primary: var(--foreground);
+  --static-text-secondary: var(--ds-neutral-600);
+  --static-text-muted: var(--muted-foreground);
+  --static-border: var(--border);
+  --static-border-light: var(--ds-neutral-200);
+
+  /* Static page spacing */
+  --static-section-padding: var(--ds-space-12);
+  --static-container-padding: var(--ds-space-6);
+  --static-content-max-width: 1200px;
+
+  /* Static page shadows */
+  --static-card-shadow: var(--ds-shadow-sm);
+  --static-card-shadow-hover: var(--ds-shadow-md);
+  --static-header-shadow: var(--ds-shadow-sm);
+
+  /* Static page animations */
+  --static-transition-duration: var(--ds-duration-300);
+  --static-transition-easing: var(--ds-ease-standard);
+
+  /* Static page border radius */
+  --static-border-radius: var(--ds-radius-lg);
+  --static-button-radius: var(--ds-radius-pill);
+
+  /* Static page typography */
+  --static-heading-font-weight: var(--ds-font-weight-bold);
+  --static-body-font-weight: var(--ds-font-weight-regular);
+
+  /* Static page specific utilities */
+  --static-gradient-primary: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-hover) 100%
+  );
+  --static-gradient-secondary: linear-gradient(
+    135deg,
+    var(--ds-neutral-50) 0%,
+    var(--ds-neutral-100) 100%
+  );
+}
+
+/* Static layout body class */
+body.static-layout {
+  background-color: var(--static-bg-primary);
+  color: var(--static-text-primary);
+  font-family: var(--ds-font-sans);
+}
+
+/* Static layout utilities */
+.static-container {
+  max-width: var(--static-content-max-width);
+  margin: 0 auto;
+  padding: var(--static-container-padding);
+}
+
+.static-section {
+  padding: var(--static-section-padding) 0;
+}
+
+.static-card {
+  background: var(--static-bg-primary);
+  border: 1px solid var(--static-border-light);
+  border-radius: var(--static-border-radius);
+  box-shadow: var(--static-card-shadow);
+  transition: box-shadow var(--static-transition-duration)
+    var(--static-transition-easing);
+}
+
+.static-card:hover {
+  box-shadow: var(--static-card-shadow-hover);
+}
+
+.static-button {
+  border-radius: var(--static-button-radius);
+  transition: all var(--static-transition-duration)
+    var(--static-transition-easing);
+}
+
+.static-heading {
+  font-weight: var(--static-heading-font-weight);
+  color: var(--static-text-primary);
+}
+
+.static-text {
+  font-weight: var(--static-body-font-weight);
+  color: var(--static-text-secondary);
+}
