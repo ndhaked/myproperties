@@ -1,0 +1,93 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-BvPzukfm.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-Black.woff": {
+    "file": "assets/BRHendrix-Black-CcAJBnj1.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-Black.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-BlackItalic.woff": {
+    "file": "assets/BRHendrix-BlackItalic-C_07XTz5.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-BlackItalic.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-Bold.woff": {
+    "file": "assets/BRHendrix-Bold-DP7ZtnuV.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-Bold.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-BoldItalic.woff": {
+    "file": "assets/BRHendrix-BoldItalic-BrUwqDRD.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-BoldItalic.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-ExtraLight.woff": {
+    "file": "assets/BRHendrix-ExtraLight-CwOVq9Lg.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-ExtraLight.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-ExtraLightItalic.woff": {
+    "file": "assets/BRHendrix-ExtraLightItalic-W9Zu1QY6.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-ExtraLightItalic.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-Light.woff": {
+    "file": "assets/BRHendrix-Light-BTa3YezX.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-Light.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-LightItalic.woff": {
+    "file": "assets/BRHendrix-LightItalic-DLHQKly1.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-LightItalic.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-Medium.woff": {
+    "file": "assets/BRHendrix-Medium-BW5tQ7UQ.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-Medium.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-MediumItalic.woff": {
+    "file": "assets/BRHendrix-MediumItalic-Cup_EpxA.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-MediumItalic.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-Regular.woff": {
+    "file": "assets/BRHendrix-Regular-Bx9RrmpC.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-Regular.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-RegularItalic.woff": {
+    "file": "assets/BRHendrix-RegularItalic-CR8y9Ex_.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-RegularItalic.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-SemiBold.woff": {
+    "file": "assets/BRHendrix-SemiBold-BHU5mqlv.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-SemiBold.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-SemiBoldItalic.woff": {
+    "file": "assets/BRHendrix-SemiBoldItalic-DPTMSlOa.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-SemiBoldItalic.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-Thin.woff": {
+    "file": "assets/BRHendrix-Thin-AQf-RRSv.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-Thin.woff"
+  },
+  "resources/css/fonts/br-hendrix-webfont/BRHendrix-ThinItalic.woff": {
+    "file": "assets/BRHendrix-ThinItalic-gB2DrQKn.woff",
+    "src": "resources/css/fonts/br-hendrix-webfont/BRHendrix-ThinItalic.woff"
+  },
+  "resources/images/adai-admin/bg.svg": {
+    "file": "assets/bg-CS8qciTi.svg",
+    "src": "resources/images/adai-admin/bg.svg"
+  },
+  "resources/images/hero-bg-slider-logo.svg": {
+    "file": "assets/hero-bg-slider-logo-gapXLw2F.svg",
+    "src": "resources/images/hero-bg-slider-logo.svg"
+  },
+  "resources/images/more-section-bg.png": {
+    "file": "assets/more-section-bg-DKA8U45U.png",
+    "src": "resources/images/more-section-bg.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-B1qOvO5y.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
