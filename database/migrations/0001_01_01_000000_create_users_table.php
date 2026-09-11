@@ -17,18 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->timestamp('last_login_at')->nullable();
-            $table->string('reset_otp', 10)->nullable();
-            $table->timestamp('reset_otp_expires_at')->nullable();
-            $table->string('profile_photo', 255)->nullable();
-            $table->string('timezone', 100)->nullable()->default('UTC');
-            $table->string('city', 150)->nullable();
-            $table->string('address', 255)->nullable();
-            $table->string('country_code', 10)->nullable();
-            $table->string('phone_number', 25)->nullable();
             $table->rememberToken();
             $table->timestamps();
-            $table->softDeletes();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

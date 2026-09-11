@@ -1,0 +1,691 @@
+{
+  "info": {
+    "name": "Estara API (v1)",
+    "description": "Full collection for the Estara property app mobile API, matching API_SPEC.md. Import the companion 'Estara - Local' environment alongside this collection.\n\nFlow to get started:\n1. Run 'Auth > Send OTP (Buyer Login/Signup)' then 'Auth > Verify OTP (Buyer)' — this auto-captures accessToken/refreshToken into the environment.\n2. Run 'Auth > Send OTP (Seller Signup)' then 'Auth > Verify OTP (Seller)' for seller-only endpoints.\n3. All other requests use {{accessToken}} (or {{sellerAccessToken}} for the Seller folder) automatically via collection/folder-level auth.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [{ "key": "token", "value": "{{accessToken}}", "type": "string" }]
+  },
+  "variable": [{ "key": "baseUrl", "value": "http://127.0.0.1:8149/api/v1" }],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Send OTP (Buyer Login/Signup)",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phone\": \"{{phone}}\",\n  \"countryCode\": \"{{countryCode}}\",\n  \"role\": \"Buyer\",\n  \"fullName\": \"Rajendra Sharma\"\n}\n\n// Omit \"fullName\" entirely to hit the Login path instead of Signup."
+            },
+            "url": { "raw": "{{baseUrl}}/auth/otp/send", "host": ["{{baseUrl}}"], "path": ["auth", "otp", "send"] },
+            "description": "§1.1. fullName is required only for Signup (new phone number); omit it for Login (existing phone number)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json().data;",
+                  "pm.collectionVariables.set('requestId', data.requestId);",
+                  "if (data.debug_otp) { pm.collectionVariables.set('debugOtp', data.debug_otp); }",
+                  "pm.test('status is 200', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Send OTP (Seller Signup)",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phone\": \"{{sellerPhone}}\",\n  \"countryCode\": \"{{countryCode}}\",\n  \"role\": \"Seller\",\n  \"fullName\": \"Seller Test Account\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/auth/otp/send", "host": ["{{baseUrl}}"], "path": ["auth", "otp", "send"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json().data;",
+                  "pm.collectionVariables.set('sellerRequestId', data.requestId);",
+                  "if (data.debug_otp) { pm.collectionVariables.set('sellerDebugOtp', data.debug_otp); }"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Resend OTP",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"requestId\": \"{{requestId}}\"\n}" },
+            "url": { "raw": "{{baseUrl}}/auth/otp/resend", "host": ["{{baseUrl}}"], "path": ["auth", "otp", "resend"] },
+            "description": "§1.3. Reuses the same requestId and returns a fresh OTP + expiry."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json().data;",
+                  "if (data.debug_otp) { pm.collectionVariables.set('debugOtp', data.debug_otp); }"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Verify OTP (Buyer)",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"{{requestId}}\",\n  \"phone\": \"{{phone}}\",\n  \"otp\": \"{{debugOtp}}\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/auth/otp/verify", "host": ["{{baseUrl}}"], "path": ["auth", "otp", "verify"] },
+            "description": "§1.2. On success, stores accessToken/refreshToken into the environment for every other Buyer-scoped request in this collection."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('status is 200', () => pm.response.to.have.status(200));",
+                  "const data = pm.response.json().data;",
+                  "pm.collectionVariables.set('accessToken', data.accessToken);",
+                  "pm.collectionVariables.set('refreshToken', data.refreshToken);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Verify OTP (Seller)",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"{{sellerRequestId}}\",\n  \"phone\": \"{{sellerPhone}}\",\n  \"otp\": \"{{sellerDebugOtp}}\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/auth/otp/verify", "host": ["{{baseUrl}}"], "path": ["auth", "otp", "verify"] }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json().data;",
+                  "pm.collectionVariables.set('sellerAccessToken', data.accessToken);",
+                  "pm.collectionVariables.set('sellerRefreshToken', data.refreshToken);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Social Login (stub)",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"provider\": \"google\",\n  \"idToken\": \"dev-stub-token\",\n  \"role\": \"Buyer\",\n  \"email\": \"buyer.social@example.com\",\n  \"fullName\": \"Social Login User\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/auth/social-login", "host": ["{{baseUrl}}"], "path": ["auth", "social-login"] },
+            "description": "§1.4. DEV STUB: real Google/Apple token verification is not wired up (no OAuth credentials configured). email/fullName are trusted as-is to identify/create the user."
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"refreshToken\": \"{{refreshToken}}\"\n}" },
+            "url": { "raw": "{{baseUrl}}/auth/refresh-token", "host": ["{{baseUrl}}"], "path": ["auth", "refresh-token"] },
+            "description": "§1.5"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json().data;",
+                  "if (data.accessToken) { pm.collectionVariables.set('accessToken', data.accessToken); }"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"refreshToken\": \"{{refreshToken}}\"\n}" },
+            "url": { "raw": "{{baseUrl}}/auth/logout", "host": ["{{baseUrl}}"], "path": ["auth", "logout"] },
+            "description": "§1.6. Revokes the current access token and the given refresh token."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Home",
+      "item": [
+        {
+          "name": "Get Home Feed",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/home", "host": ["{{baseUrl}}"], "path": ["home"] },
+            "description": "§2.1. Public. Categories, trust features, popular cities, featured properties, exclusive offer banner."
+          }
+        },
+        {
+          "name": "Search Properties",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/properties/search?q=Greenfield&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["properties", "search"],
+              "query": [
+                { "key": "q", "value": "Greenfield" },
+                { "key": "limit", "value": "10" }
+              ]
+            },
+            "description": "§2.2. Public. Backs the home screen search bar."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Properties",
+      "item": [
+        {
+          "name": "List Properties",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/properties?category=Pre-Launch Properties&city=Bangalore&propertyType=Plot \/ Land&minPrice=1000000&maxPrice=10000000&facing=East&page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["properties"],
+              "query": [
+                { "key": "category", "value": "Pre-Launch Properties", "disabled": true },
+                { "key": "city", "value": "Bangalore", "disabled": true },
+                { "key": "q", "value": "Greenfield", "disabled": true },
+                { "key": "propertyType", "value": "Plot / Land", "disabled": true },
+                { "key": "minPrice", "value": "1000000", "disabled": true },
+                { "key": "maxPrice", "value": "10000000", "disabled": true },
+                { "key": "minSize", "value": "1000", "disabled": true },
+                { "key": "maxSize", "value": "3000", "disabled": true },
+                { "key": "facing", "value": "East", "disabled": true },
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" }
+              ]
+            },
+            "description": "§3.1. Public. All filter query params are pre-added but disabled — enable the ones you want to test. Returns {items, pagination, banner}."
+          }
+        },
+        {
+          "name": "Property Detail",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/properties/{{propertyId}}", "host": ["{{baseUrl}}"], "path": ["properties", "{{propertyId}}"] },
+            "description": "§3.2. Public. Increments the property's view counter. isSaved is only accurate when a Bearer token is attached (this request is public/noauth by default per the spec — remove the noauth override on the Authorization tab to test as a logged-in buyer)."
+          }
+        },
+        {
+          "name": "Save Property",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/properties/{{propertyId}}/save", "host": ["{{baseUrl}}"], "path": ["properties", "{{propertyId}}", "save"] },
+            "description": "§3.3. Requires Buyer auth."
+          }
+        },
+        {
+          "name": "Unsave Property",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/properties/{{propertyId}}/save", "host": ["{{baseUrl}}"], "path": ["properties", "{{propertyId}}", "save"] },
+            "description": "§3.3. Requires Buyer auth."
+          }
+        },
+        {
+          "name": "Filter Options",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/properties/filter-options", "host": ["{{baseUrl}}"], "path": ["properties", "filter-options"] },
+            "description": "§4.1. Public. propertyTypes, cities, facingOptions, priceRange, sizeRangeSqft."
+          }
+        },
+        {
+          "name": "Contact Owner",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"message\": \"Interested in this plot, please share more details.\"\n}" },
+            "url": { "raw": "{{baseUrl}}/properties/{{propertyId}}/contact", "host": ["{{baseUrl}}"], "path": ["properties", "{{propertyId}}", "contact"] },
+            "description": "§7.1. Requires Buyer auth. Creates a Lead and notifies the owner; returns ownerPhone."
+          }
+        },
+        {
+          "name": "Book Site Visit",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date\": \"2026-10-12\",\n  \"time\": \"10:30 AM\",\n  \"visitorName\": \"Amit Kumar\",\n  \"visitorPhone\": \"+919000000000\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/properties/{{propertyId}}/visits", "host": ["{{baseUrl}}"], "path": ["properties", "{{propertyId}}", "visits"] },
+            "description": "§6.1. Requires Buyer auth."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json().data;",
+                  "if (data.id) { pm.collectionVariables.set('visitId', data.id.replace('visit_', '')); }"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "User (Buyer profile)",
+      "item": [
+        {
+          "name": "Get Me",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/users/me", "host": ["{{baseUrl}}"], "path": ["users", "me"] },
+            "description": "§5.1"
+          }
+        },
+        {
+          "name": "Update Me",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"fullName\": \"Rajendra Sharma\",\n  \"notificationsEnabled\": true\n}" },
+            "url": { "raw": "{{baseUrl}}/users/me", "host": ["{{baseUrl}}"], "path": ["users", "me"] },
+            "description": "§5.2"
+          }
+        },
+        {
+          "name": "Upload Avatar",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [{ "key": "avatar", "type": "file", "src": [] }]
+            },
+            "url": { "raw": "{{baseUrl}}/users/me/avatar", "host": ["{{baseUrl}}"], "path": ["users", "me", "avatar"] },
+            "description": "§5.3. Attach an image file to the 'avatar' field."
+          }
+        },
+        {
+          "name": "Saved Properties",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/users/me/saved-properties?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["users", "me", "saved-properties"],
+              "query": [{ "key": "page", "value": "1" }, { "key": "limit", "value": "10" }]
+            },
+            "description": "§3.4"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Visits",
+      "item": [
+        {
+          "name": "List My Visits (Buyer)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/visits?role=buyer&status=Upcoming",
+              "host": ["{{baseUrl}}"],
+              "path": ["visits"],
+              "query": [
+                { "key": "role", "value": "buyer" },
+                { "key": "status", "value": "Upcoming", "description": "Upcoming | Completed | Cancelled" }
+              ]
+            },
+            "description": "§6.2. role is optional — inferred from the caller's own role if omitted."
+          }
+        },
+        {
+          "name": "Update Visit (reschedule / status)",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"status\": \"Completed\"\n}\n\n// Or reschedule instead:\n// { \"date\": \"2026-10-20\", \"time\": \"3:00 PM\" }" },
+            "url": { "raw": "{{baseUrl}}/visits/{{visitId}}", "host": ["{{baseUrl}}"], "path": ["visits", "{{visitId}}"] },
+            "description": "§6.3. Callable by the buyer who booked it or the seller who owns the property."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Uploads",
+      "item": [
+        {
+          "name": "Upload Images",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "images[]", "type": "file", "src": [] },
+                { "key": "images[]", "type": "file", "src": [] }
+              ]
+            },
+            "url": { "raw": "{{baseUrl}}/uploads/images", "host": ["{{baseUrl}}"], "path": ["uploads", "images"] },
+            "description": "§9.2. Returns { urls: [...] } — feed these into 'Create Listing'.imageUrls."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json().data;",
+                  "if (data.urls && data.urls[0]) { pm.collectionVariables.set('uploadedImageUrl', data.urls[0]); }"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Upload Document",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [{ "key": "document", "type": "file", "src": [] }]
+            },
+            "url": { "raw": "{{baseUrl}}/uploads/documents", "host": ["{{baseUrl}}"], "path": ["uploads", "documents"] },
+            "description": "§9.3. Returns { id, name, sizeMb, url } — feed the id into 'Create Listing'.documentIds."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const data = pm.response.json().data;",
+                  "if (data.id) { pm.collectionVariables.set('uploadedDocumentId', data.id); }"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Notifications",
+      "item": [
+        {
+          "name": "List Notifications",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/notifications?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["notifications"],
+              "query": [{ "key": "page", "value": "1" }, { "key": "limit", "value": "10" }]
+            },
+            "description": "§11.1"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const items = (pm.response.json().data || {}).items || [];",
+                  "if (items[0]) { pm.collectionVariables.set('notificationId', items[0].id.replace('notif_', '')); }"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Unread Count",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/notifications/unread-count", "host": ["{{baseUrl}}"], "path": ["notifications", "unread-count"] },
+            "description": "§11.2"
+          }
+        },
+        {
+          "name": "Mark Notification Read",
+          "request": {
+            "method": "PATCH",
+            "url": { "raw": "{{baseUrl}}/notifications/{{notificationId}}/read", "host": ["{{baseUrl}}"], "path": ["notifications", "{{notificationId}}", "read"] },
+            "description": "§11.3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Seller",
+      "auth": {
+        "type": "bearer",
+        "bearer": [{ "key": "token", "value": "{{sellerAccessToken}}", "type": "string" }]
+      },
+      "item": [
+        {
+          "name": "Dashboard",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/seller/dashboard", "host": ["{{baseUrl}}"], "path": ["seller", "dashboard"] },
+            "description": "§8.1. Requires Seller role."
+          }
+        },
+        {
+          "name": "My Listings",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/seller/listings?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["seller", "listings"],
+              "query": [{ "key": "page", "value": "1" }, { "key": "limit", "value": "10" }]
+            },
+            "description": "§8.2"
+          }
+        },
+        {
+          "name": "Create Listing",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"propertyType\": \"Plot / Land\",\n  \"title\": \"Greenfield Paradise\",\n  \"category\": \"Pre-Launch Properties\",\n  \"location\": \"Sarjapur Road, Bangalore\",\n  \"city\": \"Bangalore\",\n  \"state\": \"Karnataka\",\n  \"pincode\": \"560035\",\n  \"plotArea\": { \"min\": 1200, \"max\": 2400, \"unit\": \"sq.ft\" },\n  \"plotSize\": \"30 X 40, 40 X 60\",\n  \"price\": 4850000,\n  \"facing\": \"East\",\n  \"isCornerPlot\": true,\n  \"propertyAge\": \"New Property\",\n  \"possessionDate\": \"2026-12-01\",\n  \"description\": \"Premium residential plots in a gated community...\",\n  \"highlights\": [\"Corner Plot\", \"Vastu Compliant\", \"East Facing\", \"Clear Title\"],\n  \"amenities\": [\"Water Supply\", \"Electricity\", \"Gated Community\", \"Street Lights\"],\n  \"nearbyPlaces\": [{ \"name\": \"Delhi Public School\", \"distanceKm\": 1.5 }],\n  \"documentIds\": [\"{{uploadedDocumentId}}\"],\n  \"imageUrls\": [\"{{uploadedImageUrl}}\"]\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/seller/listings", "host": ["{{baseUrl}}"], "path": ["seller", "listings"] },
+            "description": "§9.4 (create). highlights/amenities are matched or created by NAME. Run 'Uploads > Upload Images/Document' first if you want imageUrls/documentIds populated automatically."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('status is 201', () => pm.response.to.have.status(201));",
+                  "const data = pm.response.json().data;",
+                  "if (data.id) { pm.collectionVariables.set('sellerListingId', data.id.replace('prop_', '')); }"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get Listing (edit prefill)",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/seller/listings/{{sellerListingId}}", "host": ["{{baseUrl}}"], "path": ["seller", "listings", "{{sellerListingId}}"] },
+            "description": "§9.1"
+          }
+        },
+        {
+          "name": "Update Listing",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"propertyType\": \"Plot / Land\",\n  \"title\": \"Greenfield Paradise (Updated)\",\n  \"city\": \"Bangalore\",\n  \"price\": 4950000,\n  \"status\": \"Active\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/seller/listings/{{sellerListingId}}", "host": ["{{baseUrl}}"], "path": ["seller", "listings", "{{sellerListingId}}"] },
+            "description": "§9.4 (update)"
+          }
+        },
+        {
+          "name": "Delete Listing",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/seller/listings/{{sellerListingId}}", "host": ["{{baseUrl}}"], "path": ["seller", "listings", "{{sellerListingId}}"] },
+            "description": "§9.6"
+          }
+        },
+        {
+          "name": "Listing Performance",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/seller/listings/{{sellerListingId}}/performance", "host": ["{{baseUrl}}"], "path": ["seller", "listings", "{{sellerListingId}}", "performance"] },
+            "description": "§8.3. NOTE: views[] is a simplification (total-to-date single point) since no per-day view log exists yet."
+          }
+        },
+        {
+          "name": "Leads & Enquiries",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/seller/leads?page=1&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["seller", "leads"],
+              "query": [{ "key": "page", "value": "1" }, { "key": "limit", "value": "10" }]
+            },
+            "description": "§7.2"
+          }
+        },
+        {
+          "name": "Get Business Profile",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/seller/business-profile", "host": ["{{baseUrl}}"], "path": ["seller", "business-profile"] },
+            "description": "§10.1"
+          }
+        },
+        {
+          "name": "Update Business Profile",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"businessName\": \"Sharma Estates\",\n  \"gstNumber\": \"29ABCDE1234F1Z5\",\n  \"address\": \"123 MG Road, Bangalore\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/seller/business-profile", "host": ["{{baseUrl}}"], "path": ["seller", "business-profile"] },
+            "description": "§10.1"
+          }
+        },
+        {
+          "name": "Get Payout Settings",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/seller/payout-settings", "host": ["{{baseUrl}}"], "path": ["seller", "payout-settings"] },
+            "description": "§10.2"
+          }
+        },
+        {
+          "name": "Update Payout Settings",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bankAccountNumber\": \"123456789012\",\n  \"ifsc\": \"HDFC0001234\",\n  \"upiId\": \"seller@upi\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/seller/payout-settings", "host": ["{{baseUrl}}"], "path": ["seller", "payout-settings"] },
+            "description": "§10.2"
+          }
+        },
+        {
+          "name": "Visits On My Listings",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/visits?role=seller",
+              "host": ["{{baseUrl}}"],
+              "path": ["visits"],
+              "query": [{ "key": "role", "value": "seller" }]
+            },
+            "description": "§6.2 from the seller's perspective — same endpoint as the Visits folder, listed here for convenience."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Config",
+      "item": [
+        {
+          "name": "Property Form Options",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/config/property-form-options", "host": ["{{baseUrl}}"], "path": ["config", "property-form-options"] },
+            "description": "§9.5. Public."
+          }
+        },
+        {
+          "name": "Countries",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/config/countries", "host": ["{{baseUrl}}"], "path": ["config", "countries"] },
+            "description": "§12.1. Public."
+          }
+        },
+        {
+          "name": "App Config",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/config/app", "host": ["{{baseUrl}}"], "path": ["config", "app"] },
+            "description": "§12.2. Public."
+          }
+        }
+      ]
+    }
+  ]
+}

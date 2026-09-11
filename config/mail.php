@@ -15,8 +15,6 @@ return [
     */
 
     'default' => env('MAIL_MAILER', 'log'),
-    'recipient_email' => env('RECIPIENT_EMAIL', 'info@laravelexpert.in'),
-
 
     /*
     |--------------------------------------------------------------------------
@@ -36,8 +34,6 @@ return [
     |            "failover", "roundrobin"
     |
     */
-
-    'recipient_email' => env('RECIPIENT_EMAIL', 'info@laravelexpert.in'),
 
     'mailers' => [
 
@@ -116,7 +112,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
 
 ];

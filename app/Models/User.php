@@ -2,19 +2,19 @@
 
 namespace App\Models;
 
+use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Storage;
+use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
-use Illuminate\Database\Eloquent\SoftDeletes;
-
 
 class User extends Authenticatable
 {
-    use SoftDeletes, Notifiable;
-    use HasRoles;
+    /** @use HasFactory<UserFactory> */
+    use HasApiTokens, HasFactory, HasRoles, Notifiable;
+
+    protected string $guard_name = 'web';
 
     /**
      * The attributes that are mass assignable.
@@ -25,34 +25,13 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'pending',
-        'gallery_name',
-        'country_id',
-        'city',
-        'address',
+        'phone',
         'country_code',
-        'phone_number',
-        'external_links',
-        'interest_reference',
-        'interest_status',
-        'interest_submitted_at',
-        'last_interest_attempt_at',
-        'consent_at',
-        'reset_otp',
-        'reset_otp_expires_at',
-        'profile_photo',
-        'timezone',
-        'status',
+        'role',
+        'avatar',
+        'is_verified',
+        'notifications_enabled',
     ];
-
-    protected $appends = ['status_label'];
-
-    public const STATUS_LABELS = ['active' => 'Active', 'inactive' => 'In-Active'];
-
-    public function getStatusLabelAttribute()
-    {
-        return self::STATUS_LABELS[$this->status] ?? ucfirst($this->status);
-    }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -62,10 +41,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
-    ];
-
-    protected $casts = [
-        'last_login_at' => 'datetime',
     ];
 
     /**
@@ -78,54 +53,55 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'pending' => 'boolean',
-            'interest_status' => 'boolean',
-            'external_links' => 'array',
-            'interest_submitted_at' => 'datetime',
-            'last_interest_attempt_at' => 'datetime',
-            'consent_at' => 'datetime',
+            'is_verified' => 'boolean',
+            'notifications_enabled' => 'boolean',
         ];
     }
 
-    public function country(): BelongsTo
+    public function listings()
     {
-        return $this->belongsTo(Country::class);
+        return $this->hasMany(Property::class, 'owner_id');
     }
 
-    /**
-     * Get the profile photo URL.
-     *
-     * @return string|null
-     */
-    public function getProfilePhotoUrlAttribute(): ?string
+    public function savedProperties()
     {
-        if (!$this->profile_photo) {
-            return null;
-        }
-
-        // Use local/public storage URL
-        // Ensure the path doesn't have leading slashes
-        $path = ltrim($this->profile_photo, '/');
-
-        // Use asset() helper for relative URLs to avoid APP_URL conflicts
-        $baseUrl = config('filesystems.disks.azure.base_url');
-        return $this->profile_photo ? $baseUrl . $this->profile_photo : null;
-        
-        return asset('storage/' . $path);
+        return $this->belongsToMany(Property::class, 'saved_properties')->withTimestamps();
     }
 
-    public function gallery()
+    public function visits()
     {
-        return $this->hasOne(Gallery::class,'user_id');
+        return $this->hasMany(Visit::class, 'buyer_id');
     }
 
-    public function activeGallery()
+    public function leads()
     {
-        return $this->hasOne(Gallery::class,'user_id')->whereIn('status',['approved','for_review']);
+        return $this->hasMany(Lead::class, 'buyer_id');
     }
 
-    public function finalActiveGallery()
+    public function appNotifications()
     {
-        return $this->hasOne(Gallery::class,'user_id')->whereIn('status',['approved']);
+        return $this->hasMany(AppNotification::class);
+    }
+
+    public function businessProfile()
+    {
+        return $this->hasOne(BusinessProfile::class);
+    }
+
+    public function payoutSettings()
+    {
+        return $this->hasOne(PayoutSetting::class);
+    }
+
+    protected static function booted(): void
+    {
+        // Keeps spatie's model_has_roles in sync with the plain `role` column (Buyer/Seller)
+        // automatically, wherever that column is set — registration, social login, admin
+        // edits, etc. — without every call site needing to remember to assignRole().
+        static::saved(function (User $user) {
+            if ($user->role && ($user->wasRecentlyCreated || $user->wasChanged('role'))) {
+                $user->syncRoles([$user->role]);
+            }
+        });
     }
 }

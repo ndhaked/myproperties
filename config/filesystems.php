@@ -41,7 +41,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => '/storage',
+            'url' => rtrim(env('APP_URL', 'http://localhost'), '/').'/storage',
             'visibility' => 'public',
             'throw' => false,
             'report' => false,
@@ -60,19 +60,6 @@ return [
             'report' => false,
         ],
 
-        'azure' => [
-            'driver'    => 'azure',
-            'name'      => env('AZURE_STORAGE_NAME'),
-            'key'       => env('AZURE_STORAGE_KEY'),
-            'container' => env('AZURE_STORAGE_CONTAINER'),
-            'endpoint_suffix' => 'core.windows.net',
-        
-            'url'       => env('AZURE_STORAGE_URL') . '/' . env('AZURE_STORAGE_CONTAINER'),
-            
-            'visibility' => 'public',
-
-            'base_url' => env('AZURE_STORAGE_BASEURL'),
-        ],
     ],
 
     /*

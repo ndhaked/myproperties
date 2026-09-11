@@ -10,9 +10,9 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
-    resolve: {
-  alias: {
-    '@': '/resources'
-  }
-}
+    server: {
+        watch: {
+            ignored: ['**/storage/framework/views/**'],
+        },
+    },
 });

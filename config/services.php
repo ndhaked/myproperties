@@ -35,12 +35,4 @@ return [
         ],
     ],
 
-    'register_interest_recipient' => env('REGISTER_INTEREST_RECIPIENT','info@yopmail.com'),
-
-    'support_email' =>env('REGISTER_INTEREST_RECIPIENT','info@yopmail.com'),
-    'recaptcha' => [
-        'site_key' => env('CAPTCHA_CLIENT_KEY'),
-        'secret_key' => env('CAPTCHA_SERVER_KEY'),
-    ]
-
 ];

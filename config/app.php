@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'ADAI'),
+    'name' => env('APP_NAME', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -121,11 +121,6 @@ return [
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
-    ],    
-    'debug_blacklist' => [
-        '_COOKIE' => array_keys($_COOKIE),
-        '_SERVER' => array_keys($_SERVER),
-        '_ENV' => array_keys($_ENV),
     ],
 
 ];
