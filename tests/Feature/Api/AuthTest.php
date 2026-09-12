@@ -23,12 +23,12 @@ class AuthTest extends TestCase
         ])->assertOk()->json('data');
 
         $this->assertArrayHasKey('requestId', $send);
-        $this->assertArrayHasKey('debug_otp', $send);
+        $this->assertArrayHasKey('debugOtp', $send);
 
         $verify = $this->postJson('/api/v1/auth/otp/verify', [
             'requestId' => $send['requestId'],
             'phone' => '9876543210',
-            'otp' => $send['debug_otp'],
+            'otp' => $send['debugOtp'],
         ])->assertOk()->json('data');
 
         $this->assertTrue($verify['isNewUser']);
@@ -92,7 +92,7 @@ class AuthTest extends TestCase
         $this->postJson('/api/v1/auth/otp/verify', [
             'requestId' => $resend['requestId'],
             'phone' => '9876543210',
-            'otp' => $resend['debug_otp'],
+            'otp' => $resend['debugOtp'],
         ])->assertOk();
     }
 
@@ -107,7 +107,7 @@ class AuthTest extends TestCase
         $verify = $this->postJson('/api/v1/auth/otp/verify', [
             'requestId' => $send['requestId'],
             'phone' => '9876543210',
-            'otp' => $send['debug_otp'],
+            'otp' => $send['debugOtp'],
         ])->json('data');
 
         $refreshed = $this->postJson('/api/v1/auth/refresh-token', [

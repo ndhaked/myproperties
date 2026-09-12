@@ -182,7 +182,7 @@ class AuthController extends Controller
         ];
 
         if (config('app.debug')) {
-            $response['debug_otp'] = $otpRequest->getAttribute('plain_otp');
+            $response['debugOtp'] = $otpRequest->getAttribute('plain_otp');
         }
 
         return $response;

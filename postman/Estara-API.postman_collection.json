@@ -33,7 +33,7 @@
                 "exec": [
                   "const data = pm.response.json().data;",
                   "pm.collectionVariables.set('requestId', data.requestId);",
-                  "if (data.debug_otp) { pm.collectionVariables.set('debugOtp', data.debug_otp); }",
+                  "if (data.debugOtp) { pm.collectionVariables.set('debugOtp', data.debugOtp); }",
                   "pm.test('status is 200', () => pm.response.to.have.status(200));"
                 ]
               }
@@ -59,7 +59,7 @@
                 "exec": [
                   "const data = pm.response.json().data;",
                   "pm.collectionVariables.set('sellerRequestId', data.requestId);",
-                  "if (data.debug_otp) { pm.collectionVariables.set('sellerDebugOtp', data.debug_otp); }"
+                  "if (data.debugOtp) { pm.collectionVariables.set('sellerDebugOtp', data.debugOtp); }"
                 ]
               }
             }
@@ -81,7 +81,7 @@
               "script": {
                 "exec": [
                   "const data = pm.response.json().data;",
-                  "if (data.debug_otp) { pm.collectionVariables.set('debugOtp', data.debug_otp); }"
+                  "if (data.debugOtp) { pm.collectionVariables.set('debugOtp', data.debugOtp); }"
                 ]
               }
             }

